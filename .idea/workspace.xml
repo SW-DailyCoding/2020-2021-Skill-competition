@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdbcb734-8de4-452b-8386-8f5129f3c6b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/1월 펀드 평가전/A_module/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1월 펀드 평가전/A_module/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nationwide-gwangju/sub.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/(2020전국)과제출제 체크리스트.hwp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/001_10001/10001_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/001_10001/10001_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/001_10001/10001_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/001_10001/10001_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/002_10002/10002_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/002_10002/10002_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/002_10002/10002_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/002_10002/10002_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/003_10004/10004_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/003_10004/10004_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/003_10004/10004_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/003_10004/10004_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/004_10005/10005_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/004_10005/10005_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/004_10005/10005_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/004_10005/10005_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/005_10006/10006_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/005_10006/10006_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/005_10006/10006_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/005_10006/10006_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/006_10007/10007_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/006_10007/10007_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/006_10007/10007_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/006_10007/10007_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/007_10008/10008_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/007_10008/10008_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/007_10008/10008_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/007_10008/10008_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/008_10010/10010_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/008_10010/10010_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/008_10010/10010_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/008_10010/10010_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/009_10011/10011_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/009_10011/10011_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/009_10011/10011_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/009_10011/10011_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/010_10012/10012_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/010_10012/10012_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/010_10012/10012_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/010_10012/10012_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/011_10014/10014_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/011_10014/10014_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/011_10014/10014_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/011_10014/10014_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/012_10015/10015_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/012_10015/10015_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/012_10015/10015_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/012_10015/10015_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/013_10016/10016_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/013_10016/10016_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/013_10016/10016_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/013_10016/10016_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/014_10019/10019_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/014_10019/10019_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/014_10019/10019_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/014_10019/10019_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/014_10019/10019_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/014_10019/10019_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/014_10019/10019_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/015_10020/10020_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/015_10020/10020_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/015_10020/10020_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/015_10020/10020_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/016_10021/10021_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/016_10021/10021_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/016_10021/10021_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/016_10021/10021_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/017_10022/10022_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/017_10022/10022_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/017_10022/10022_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/017_10022/10022_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/017_10022/10022_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/017_10022/10022_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/017_10022/10022_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/017_10022/10022_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/018_10023/10023_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/018_10023/10023_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/018_10023/10023_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/018_10023/10023_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/019_10025/10025_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/019_10025/10025_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/019_10025/10025_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/019_10025/10025_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/019_10025/10025_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/019_10025/10025_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/020_10026/10026_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/020_10026/10026_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/020_10026/10026_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/020_10026/10026_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/021_10027/10027_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/021_10027/10027_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/021_10027/10027_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/021_10027/10027_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/022_10028/10028_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/022_10028/10028_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/022_10028/10028_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/022_10028/10028_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/023_10029/10029_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/023_10029/10029_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/023_10029/10029_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/023_10029/10029_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/024_10030/10030_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/024_10030/10030_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/024_10030/10030_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/024_10030/10030_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/025_10031/10031_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/025_10031/10031_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/025_10031/10031_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/025_10031/10031_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/026_10032/10032_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/026_10032/10032_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/026_10032/10032_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/026_10032/10032_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/027_10033/10033_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/027_10033/10033_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/027_10033/10033_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/027_10033/10033_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/028_10034/10034_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/028_10034/10034_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/028_10034/10034_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/028_10034/10034_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/029_10036/10036_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/029_10036/10036_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/029_10036/10036_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/029_10036/10036_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/030_10037/10037_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/030_10037/10037_2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/030_10037/10037_3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalImages/030_10037/10037_4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인 및 개발(광주)_2/선수제공파일/축제_현황/festivalList.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/웹디자인및개발(채점기준).hwp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-gwangju/지급재료 및 시설장비 목록.hwp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-seoul/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nationwide-seoul/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Nationwide-gwangju/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nGtpLzczWk3YeJpfQMoKv6HQo5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\School\Desktop\새 폴더\2020-Skill-competition\Nationwide-gwangju" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/2020-Skill-competition/Nationwide-gwangju/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdbcb734-8de4-452b-8386-8f5129f3c6b0" name="Default Changelist" comment="" />
+      <created>1611028442951</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611028442951</updated>
+      <workItem from="1611028452792" duration="24081000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1611032510377">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611032510377" />
+    <state width="1899" height="186" key="GridCell.Tab.0.bottom" timestamp="1611031980699">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611031980699" />
+    <state width="1899" height="186" key="GridCell.Tab.0.center" timestamp="1611031980699">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="186" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611031980699" />
+    <state width="1899" height="186" key="GridCell.Tab.0.left" timestamp="1611031980699">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="186" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611031980699" />
+    <state width="1899" height="186" key="GridCell.Tab.0.right" timestamp="1611031980699">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="186" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611031980699" />
+    <state width="1899" height="186" key="GridCell.Tab.1.bottom" timestamp="1611031980700">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611031980700" />
+    <state width="1899" height="186" key="GridCell.Tab.1.center" timestamp="1611031980700">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="186" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611031980700" />
+    <state width="1899" height="186" key="GridCell.Tab.1.left" timestamp="1611031980699">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="186" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611031980699" />
+    <state width="1899" height="186" key="GridCell.Tab.1.right" timestamp="1611031980700">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="186" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611031980700" />
+    <state width="593" height="446" key="SwitcherDM" timestamp="1611038113717">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="593" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611038113717" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611042167467">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611042167467" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/2020_Skill_competition$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1611029852770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
