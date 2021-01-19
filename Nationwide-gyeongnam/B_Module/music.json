@@ -1,0 +1,79 @@
+{
+    "data": [
+      {
+        "song": "가오리",
+        "src": "/music_list/가오리.mp3",
+        "artist" : "빈첸"
+      },
+      {
+        "song": "알렉산더처럼 왕",
+        "src": "/music_list/알렉산더처럼 왕.mp3",
+        "artist" : "해쉬스완"
+      },
+      {
+        "song": "Jasmine",
+        "src": "/music_list/Jasmine.mp3",
+        "artist" : "DPR Live"
+      },
+      {
+        "song": "Martini Blue",
+        "src": "/music_list/Martini Blue.mp3",
+        "artist" : "DPR Live"
+      },
+      {
+        "song": "Text Me",
+        "src": "/music_list/Text Me.mp3",
+        "artist" : "DPR Live"
+      },
+      {
+        "song": "하루에도 열두번",
+        "src": "/music_list/하루에도 열두번.mp3",
+        "artist": "윤건"
+      },
+      {
+        "song": "너를 그린 우주",
+        "src": "/music_list/.mp3",
+        "artist": "마크툽"
+      },
+      {
+        "song": "응급실",
+        "src": "/music_list/응급실.mp3",
+        "artist": "IZI"
+      },
+      {
+        "song": "겁쟁이",
+        "src": "/music_list/겁쟁이.mp3",
+        "artist": "버즈"
+      },
+      {
+        "song": "초록빛",
+        "src": "/music_list/초록빛.mp3",
+        "artist": "폴킴"
+      },
+      {
+        "song": "형",
+        "src": "/music_list/형.mp3",
+        "artist": "노라조"
+      },
+      {
+        "song": "가족사진",
+        "src": "/music_list/가족사진.mp3",
+        "artist": "김진호"
+      },
+      {
+        "song": "너도 그냥 날 놓아주면 돼",
+        "src": "/music_list/너도 그냥 날 놓아주면 돼.mp3",
+        "artist": "윤건"
+      },
+      {
+        "song": "소주 한 잔",
+        "src": "/music_list/소주 한 잔.mp3",
+        "artist": "임창정"
+      },
+      {
+        "song": "엄마가 딸에게",
+        "src": "/music_list/엄마가 딸에게.mp3",
+        "artist": "양희은"
+      }
+    ]
+  }
