@@ -5,10 +5,11 @@
     margin: 0; padding: 0;
     box-sizing: border-box;
     color: var(--black) !important;
-    font-family: "맑은 고딕";
+    font-family: "나눔고딕", sans-serif;
 }
 
 body {
+    overflow-x: hidden !important;
     background: #F7F8F9;
 }
 
@@ -251,7 +252,7 @@ aside {
 /* 펀드 영역 */
 .fund {
     position: relative;
-    height: 900px;
+
 }
 
 .inner .title::before {
@@ -259,7 +260,7 @@ aside {
     background-color: #333;
     width: 140px; height: 3px;
     position: absolute;
-    top: 5%; left: 20%;
+    top: 2.5%; left: 20%;
     margin-top: -1.5px;
 }
 
@@ -280,7 +281,7 @@ aside {
     display: block;
 }
 
-@media (max-width:768px) {
+@media (max-width:760px) {
     .t2{
         padding-right: 0px !important;
     }
@@ -297,34 +298,50 @@ aside {
     .title::before {
         display: none;
     }
+    .fund { height: 4200px;}
+    .view { top: -30px !important; right: 60px !important;}
+    .fund-list { width: 480px !important}
+    .image__box { margin-left: 0 !important;}
+    .fund-list .image { width: 400px !important; height: 400px !important; padding: 0 !important;}
+    .image__box { width: 380px !important;}
+    .item { margin-bottom: 60px !important;}
 
-    .fund { height: 1000px;}
 }
 
-.fund-list li{
-    border-bottom: 1px solid #eee;
+.item { position: relative; }
+
+.fund-list .image {
+    width: 600px; height: 400px;
+    padding: 80px;
 }
 
-.fund-list li a{
-    display: block;
-    transition-duration: .3s;
+.fund-list .image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
 }
 
-.category {
-    font-size: 1.4em !important;
-    color: var(--blue) !important;
-}
+.fund-box h4 { left: 100px; position: absolute}
+.item .image__box { margin-top: 70px; margin-left: 60px; width: 550px;}
+.item h3{  margin-bottom: 30px;}
+.item ul li { font-size: 1.2em}
+.item li:nth-child(1) { margin-bottom: 20px;}
+.item li:nth-child(2) { color: var(--blue) !important; font-weight: bold}
+.item .date { color: #4e555b !important }
+.item .view { position: absolute; color: #aaa !important; right: 180px; font-weight: bold; top: 10px;
+    cursor: pointer;}
+.item { margin-bottom: 40px;}
 
-.fund-list li a .tit {
-    max-width: calc(100% - 26px);
-    margin: 10px 0 11px;
-    font-size: 1.7em;
-}
+.loading { margin-top: 40px;}
+.loading__bar { border: 1px solid var(--blue) !important; width: 100px; height: 30px;
+    background: #fff !important; position: relative}
+.loading__d { position: absolute;
+    background: var(--blue) !important; height: 30px; left: 660px;}
+.loading__txt { margin-left: 10px;}
+.d-93 { width: 93px;}
+.d-77 { width: 77px;}
+.d-56 { width: 56px;}
+.d-41 { width: 41px;}
 
-.fund-list li a span {
-    display: inline-block;
-    font-size: 0.78em;
-}
 /* /펀드 영역 */
 
 /* 푸터 영역 */

@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="nav nav--aside mt-3">
-                <div class="nav__item"><a href="#">메인페이지</a></div>
+                <div class="nav__item"><a href="./index.html">메인페이지</a></div>
                 <div class="nav__item"><a href="./fundRegister.html">펀드등록</a></div>
                 <div class="nav__item"><a href="./fundView.html">펀드보기</a></div>
                 <div class="nav__item"><a href="./investorList.html">투자자목록</a></div>
@@ -74,10 +74,7 @@
             <div class="image"></div>
         </div>
         <div class="visual__text">
-            <strong>킥스타터</strong> <br/>
-            펀드, 다른 사람도 아닌 당신이 해냅니다.
-            <div class="readMore">바로가기</div>
-
+            <strong>펀드등록</strong> <br/>
         </div>
     </div>
     <!-- /비주얼 영역 -->
@@ -87,16 +84,38 @@
         <div class="inner d-center">
             <div class="title">Fund Register</div>
         </div>
-        <div class="form_box wrap d-flex">
+        <div class="form_box wrap">
             <form>
-                <input type="number">
-                <input type="text">
-                <input type="date">
-                <input type="number">
-                <input type="text">
-                <input type="image">
-                <input type="time"> <!-- 마감 -->
-                <button type="submit">작성 완료</button>
+                <div class="input-group input-group-sm mb-3">
+                    <p class="fund__num form-label" id="fund__num">펀드번호</p>
+                    <input type="number" class="form-control">
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <p class="found__fund form-label" id="found__fund">창업펀드</p>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <p class="dead__line form-label" id="dead__line">모집마감일</p>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <p class="price form-label" id="price">모집금액</p>
+                    <input type="number" class="form-control">
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <p class="exp form-label" id="exp">상세설명</p>
+                    <textarea  class="form-control"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">펀드이미지</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <button class="form__btn" type="submit">작성 완료</button>
             </form>
         </div>
     </div>
