@@ -6,7 +6,7 @@ import investor from './investor.js';
 import system from './system.js';
 
 class App{
-    constructor(path){
+    constructor(){
         this.view = null;
         this.main = null;
         this.join = null;
@@ -14,28 +14,30 @@ class App{
         this.investor = null;
         this.system = null;
 
-        this.path = path;
-        this.fundList = [];
-
-        fetch("fund.json")
-            .then(res => res.json())
-            .then(data => this.init(data))
+        this.init();
     }
 
-    init(data) {
-
-        this.router();
+    async init(data) {
+        this.funds = await this.getFunds();
+        this.render();
     }
 
-    router() {
+    // 렌더링
+    render() {
         switch () {
 
         }
     }
 
+    // JSON 가져오기
+    getFunds() {
+        return  fetch("fund.json")
+            .then(res => res.json())
+            .then(data => this.init(data))
+    }
+
 }
 
 window.onload = () =>{
-    let now_page = document.location.href.match(/[a-zA-Z]+.html/g) === null ? "index.html" : document.location.href.match(/[a-zA-Z]+.html/g)[0];
-    let app = new App(now_page);
+    let app = new App();
 }
