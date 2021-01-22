@@ -4,7 +4,6 @@
     <list default="true" id="6cc3f31f-b173-441a-ae86-bcaeadfde5bb" name="Default Changelist" comment="add">
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611101391585</updated>
       <workItem from="1611101394152" duration="16034000" />
-      <workItem from="1611189720241" duration="21078000" />
+      <workItem from="1611189720241" duration="22140000" />
     </task>
     <servers />
   </component>
@@ -68,5 +67,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="61" y="104" width="1859" height="810" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611212328163" />
+    <state x="2660" y="261" key="FileChooserDialogImpl" timestamp="1611213975717">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611213975717" />
   </component>
 </project>

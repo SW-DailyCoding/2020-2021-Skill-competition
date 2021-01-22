@@ -1,41 +1,95 @@
-import view from './view.js';
 import main from './main.js';
-import join from './join.js';
+import view from './view.js';
 import register from './register.js';
 import investor from './investor.js';
-import system from './system.js';
+import signUp from './signUp.js';
+import common from './common.js';
 
 class App{
-    constructor(){
-        this.view = null;
+    constructor(route){
         this.main = null;
-        this.join = null;
+        this.view = null;
         this.register = null;
         this.investor = null;
-        this.system = null;
+        this.signUp = null;
+        this.common = null;
 
-        this.init();
+        this.route = route; // 경로
+        this.list = [];
+
+        fetch("./js/fund.json")
+            .then(res => res.json())
+            .then(data => this.init(data));
+
+        this.loading();
     }
 
-    async init(data) {
-        this.funds = await this.getFunds();
+    // JSON 가져오기
+    // getFunds() {
+    //     return  fetch("./js/fund.json")
+    //         .then(res => res.json())
+    //         .then(data => this.init(data));
+    // }
+
+    init(data) {
+        // 값
+        console.log(data);
+        data.forEach((x, idx) => {
+            x.attain = (x.current / x.total) * 100; // Attainment -> attain
+            x.idx = idx;
+            // x.image = `images/fundImg${idx++}.jpg`;
+        });
+
+        this.list = data;
+        this.common = new common(this.list);
+        this.main = new main(this.list, this.common);
+        this.view = new view(this.list, this.common);
+        this.register = new register(this.list, this.common);
+        this.investor = new investor(this.list, this.common);
+        this.signUp = new signUp(this.list, this.common);
+
         this.render();
+        
+        // 로딩
+        // document.querySelectorAll(".nav__item").forEach(x => {
+        //     x.addEventListener("click", this.loading);
+        // })
     }
 
     // 렌더링
     render() {
-        switch () {
+        switch (this.route) {
+            case "index.html":
+                this.main.mainLoading();
+                break;
 
+            case "view.html":
+                this.view.viewLoading();
+                break;
+
+            case "join.html":
+                this.signUp.joinLoading();
+                break;
+
+            case "register.html":
+                this.register.registerLoading();
+                break;
+
+            case "investor.html":
+                this.investor.investorLoding();
+                break;
         }
     }
 
-    // JSON 가져오기
-    getFunds() {
-        return  fetch("fund.json")
-            .then(res => res.json())
-            .then(data => this.init(data))
-    }
+    // 로딩, 리턴
+    loading() {
+        let element = document.querySelectorAll(".progress-bar");
+        for(let el in element) {
+            element[el].style.width = "50%";
+            element[el].style.transform = "all 0.3s ease-out";
+        }
 
+    }
 }
 
 window.onload = () =>{
