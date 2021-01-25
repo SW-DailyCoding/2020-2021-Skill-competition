@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./fontawesome/css/font-awesome.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/sub.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <title>킥스타터</title>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <input type="checkbox" id="open-aside" hidden>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="h-100 d-around">
+            <a href="#">
+                <img src="./images/logo.svg" alt="image" title="image" height="80">
+            </a>
+            <div class="search">
+                <i class="fa fa-search"></i>
+                <input type="search">
+            </div>
+            <div class="nav d-none d-lg-flex">
+                <div class="nav__item"><a href="./index.html">메인페이지</a></div>
+                <div class="nav__item"><a href="./fundRegister.html">펀드등록</a></div>
+                <div class="nav__item"><a href="./fundView.html">펀드보기</a></div>
+                <div class="nav__item"><a href="./investorList.html">투자자목록</a></div>
+            </div>
+            <div class="other d-lg-flex d-between">
+                <div class="sign__btn btn"><i class="fa fa-user"></i></div>
+                <p class="sign__text">로그인</p>
+                <a href="./signUp.html"><div class="login__btn btn"><i class="fa fa-sign-in"></i></div></a>
+                <p><a href="#">회원가입</a></p>
+                <a class="admin" href="#">관리자</a>
+            </div>
+            <label for="open-aside" class="icon-bars d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </header>
+    <!-- 헤더 영역 -->
+
+    <!-- 사이드바 -->
+    <aside class="d-lg-none">
+        <label for="open-aside" class="aside__bg"></label>
+        <div class="aside__content">
+            <div class="search search-aside">
+                <div class="icon">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div class="nav nav--aside mt-3">
+                <div class="nav__item"><a href="./index.html">메인페이지</a></div>
+                <div class="nav__item"><a href="./fundRegister.html">펀드등록</a></div>
+                <div class="nav__item"><a href="./fundView.html">펀드보기</a></div>
+                <div class="nav__item"><a href="./investorList.html">투자자목록</a></div>
+            </div>
+        </div>
+
+    </aside>
+    <!-- /사이드바 -->
+
+    <!-- 비주얼 영역 -->
+    <div class="visual mt-2">
+        <div class="visual__image">
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+        </div>
+        <div class="visual__text">
+            <strong>펀드등록</strong> <br/>
+        </div>
+    </div>
+    <!-- /비주얼 영역 -->
+
+    <!-- 등록 영역 -->
+    <div class="register mt-5 mb-5 wrap">
+        <div class="inner d-center">
+            <div class="title">Fund Register</div>
+        </div>
+        <div class="form_box wrap">
+            <form id="register">
+                <div class="input-group input-group-sm mb-3">
+                    <p class="fund__num form-label">펀드번호</p>
+                    <input type="text" class="form-control success" id="fund__num" disabled>
+                    <i class="fa fa-check formInputIcon success"></i>
+                    <p class="formWarningMsg"></p>
+                </div>
+
+
+                <div class="input-group input-group-sm mb-3">
+                    <p class="found__fund form-label">창업펀드</p>
+                    <input type="text" class="form-control" id="found__fund">
+                    <i class="fa fa-check formInputIcon success"></i>
+                    <p class="formWarningMsg"></p>
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <p class="dead__line form-label" >모집마감일</p>
+                    <input type="text" class="form-control" id="dead__line">
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <p class="price form-label" >모집금액</p>
+                    <input type="number" class="form-control" id="price">
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <p class="exp form-label" name="exp">상세설명 <span id="word">0</span> / 500</p>
+                    <textarea  class="form-control" id="exp" name="exp"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">펀드이미지</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <button class="form__btn" type="submit">작성 완료</button>
+            </form>
+        </div>
+    </div>
+    <!-- /등록 영역 -->
+
+</div>
+<!-- 푸터 영역 -->
+<footer>
+    <div class="inner">
+        <div class="cont wrap">
+            <ul class="menu">
+                <li><a href="#">펀드소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#" class="privacy">개인정보처리방침</a></li>
+                <li><a href="#">양영고등학교</a></li>
+            </ul>
+            <div class="info">
+                <li>Tel) 031-778-2300</li>
+                <li>우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교</li>
+                <li>우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교</li>
+                <li>Tel) 031-778-2300</li>
+            </div>
+            <div class="copyright">Copyright Gondr Allright reserved. Since 2017-03-01</div>
+        </div>
+    </div>
+
+</footer>
+<script type="module" src="./js/common.js"></script>
+<script type="module" src="./js/main.js"></script>
+<script type="module" src="./js/view.js"></script>
+<script type="module" src="./js/register.js"></script>
+<script type="module" src="./js/investor.js"></script>
+<script type="module" src="./js/signUp.js"></script>
+<script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

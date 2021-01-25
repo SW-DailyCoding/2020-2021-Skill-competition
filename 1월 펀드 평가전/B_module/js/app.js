@@ -21,7 +21,7 @@ class App{
             .then(res => res.json())
             .then(data => this.init(data));
 
-        this.loading();
+        // this.loading();
     }
 
     // JSON 가져오기
@@ -37,7 +37,7 @@ class App{
         data.forEach((x, idx) => {
             x.attain = (x.current / x.total) * 100; // Attainment -> attain
             x.idx = idx;
-            // x.image = `images/fundImg${idx++}.jpg`;
+            x.photo = `images/fundImg${idx++}.jpg`;
         });
 
         this.list = data;
@@ -49,7 +49,7 @@ class App{
         this.signUp = new signUp(this.list, this.common);
 
         this.render();
-        
+
         // 로딩
         // document.querySelectorAll(".nav__item").forEach(x => {
         //     x.addEventListener("click", this.loading);
@@ -58,40 +58,42 @@ class App{
 
     // 렌더링
     render() {
-        switch (this.route) {
+        switch (this.route)
+        {
             case "index.html":
                 this.main.mainLoading();
                 break;
 
-            case "view.html":
+            case "fundView.html":
                 this.view.viewLoading();
                 break;
 
-            case "join.html":
-                this.signUp.joinLoading();
+            case "signUp.html":
+                this.signUp.signLoading();
                 break;
 
-            case "register.html":
+            case "fundRegister.html":
                 this.register.registerLoading();
                 break;
 
-            case "investor.html":
-                this.investor.investorLoding();
+            case "investorList.html":
+                this.investor.investorLoading();
                 break;
         }
     }
 
     // 로딩, 리턴
-    loading() {
-        let element = document.querySelectorAll(".progress-bar");
-        for(let el in element) {
-            element[el].style.width = "50%";
-            element[el].style.transform = "all 0.3s ease-out";
-        }
-
-    }
+    // loading() {
+    //     let element = document.querySelectorAll(".progress-bar");
+    //     for(let el in element) {
+    //         element[el].style.width = "50%";
+    //         element[el].style.transform = "all 0.3s ease-out";
+    //     }
+    //
+    // }
 }
 
 window.onload = () =>{
-    let app = new App();
+    let nowPage = document.location.href.match(/[a-zA-Z]+.html/g) === null ? "index.html" : document.location.href.match(/[a-zA-Z]+.html/g)[0];
+    let app = new App(nowPage);
 }
