@@ -1,0 +1,232 @@
+#popup__bg {
+    background: rgba(0,0,0,0.5);
+    z-index: 20;
+    position: fixed;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    display: none;
+    z-index: 30;
+}
+
+.popup {
+    padding: 20px;
+    width: 600px;
+    /*height: 400px;*/
+    background: #fff;
+    position: relative;
+    margin: 20px auto;
+    z-index: 30;
+
+    /*left: 50%; top: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+}
+
+/* 토스 메세지 */
+#toast{
+    padding: 0 30px;
+    background-color: #ee2737;
+    font-size: 1em;
+    line-height: 50px;
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0px;
+    transition: 0.5s;
+    opacity: 0;
+    text-align: center;
+    z-index: 200000;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+#toast p {
+    color: #fff !important;
+    opacity: .8;
+    font-weight: bold;
+}
+
+#toast.open{
+    opacity: .8;
+    bottom: 100px;
+}
+
+#toastRemove{
+    border: none;
+    position: absolute;
+    top: -8px;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+    transition: .3s;
+    cursor: pointer;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: .7;
+
+}
+
+#toastRemove > i{
+    pointer-events: none;
+    font-size: 1.1em;
+    color: #fff;
+    cursor: pointer !important;
+}
+
+#toastRemove:hover > i{color: #ddd;}
+/* /토스 메세지 */
+
+
+
+/* 투자자 목록 */
+#investorPopupList {
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+    z-index: 30;
+
+}
+
+.investorPopup {
+    width: 60%;
+    height: 100px;
+}
+
+.fa-krw {
+    color: #0b2e13 !important;
+    width: 20px;
+    height: 20px;
+    margin-left: 100px;
+    z-index: 500;
+}
+
+.fa-krw::before {
+    display: none;
+}
+
+.remove {
+    width: 200px;
+    height: 20px;
+    outline: none;
+}
+
+/* 토스트 */
+
+
+/*.form-control { margin-bottom: 70px;}*/
+.form-control.success{border-color: #5cb85c;}
+.formWarningMsg {
+    border-color: #E54444 !important; display: block;
+    color: #E54444 !important;
+    font-weight: bold;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: .3s;
+    margin-left: 450px;
+    margin-bottom: 10px;
+}
+.formWarningMsg.open{opacity: 1;}
+
+.form-control:focus{
+    border-color: #37B7A4;
+    color: #000;
+}
+.formInputIcon {
+    color: #5cb85c !important;
+    margin-top: 5px;
+    font-size: 1.2em;
+    margin-left: 980px;
+}
+
+.formInputIcon.warning {
+    color: #E54444 !important;
+}
+
+/* viewForm */
+#viewForm .formGroup{margin: 10px 0;}
+#viewSign{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#viewSignWeightBox{
+    width: 100%;
+    padding: 0 15px;
+}
+
+#viewSignWeightLabel{
+    margin-bottom: 15px;
+    display: block;
+}
+
+#viewSignWeightInput{
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*border-bottom:2px solid #232A4F;*/
+}
+
+#viewSignWeight{
+    width: 40%;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 30px;
+    outline: none;
+    padding: 0 10px;
+}
+
+#viewSignWeightInput > span{font-weight: bold;}
+
+#viewFormSign{
+    width: 800px !important;
+    height: 150px;
+    border: 1px solid #ddd;
+}
+
+#viewForm .formWarningMsg {
+    margin-left: 120px;
+}
+
+#viewPopupButtonBox{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.viewPopupBtn{
+    width: 130px;
+    height: 40px;
+    border-radius: 40px;
+    border: 0;
+    border: 1px solid #232A4F;
+    background-color: rgba(0, 0, 0, 0);
+    color: #aaa;
+    transition: .3s;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 3px;
+    font-size: 0.8em;
+    outline: none;
+}
+
+.viewPopupBtn:hover {
+    opacity: 0.6;
+    transition: all .3s;
+    outline: none;
+}
+
+#viewFundBtn{
+    color: #37B7A4;
+    background: #ffb400;
+    border: 0;
+}
+
+#viewForm .formInputIcon {
+    margin-left: 500px;
+}
