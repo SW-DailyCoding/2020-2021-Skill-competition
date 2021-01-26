@@ -43,7 +43,7 @@ export default class main {
                                         </ul>
                                         <p class="date">마감날짜 : ${endDate}</p>
                                     </div>
-                                    <div class="view" data-idx="${idx}">VIEW MORE</div>
+                                    <div class="view" data-idx="${idx}">상세보기</div>
                                 </div>
                             </div>   `;
         return element.firstChild;

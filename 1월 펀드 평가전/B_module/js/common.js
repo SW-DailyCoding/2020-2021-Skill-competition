@@ -3,12 +3,18 @@ export default class common {
         this.list = list;
     }
 
-    makePopUp(title, content) {
+    makePopUp(number, name, endDate, current, total, owner, content) {
         let element = document.createElement("div");
         element.innerHTML = `<div id="popup__bg">
                                 <div class="popup">
-                                    <button class="remove"><i class="fa fa-remove"></i></button>
-                                    <div class="header">${title}</div>
+                                    <button class="remove btn">닫기<i class="fa fa-remove"></i></button>
+                                    <div class="header">
+                                        <p>${number}</p>
+                                        <p>${name}</p>
+                                        <p>${endDate}</p>
+                                        <span>${current}</span>/<span>${total}</span>
+                                        <p>${owner}</p>
+                                    </div>
                                     <div class="content">${content}</div>
                                 </div>
                              </div>`;
@@ -26,6 +32,12 @@ export default class common {
     investorPopup = e => {
         let idx = e.target.dataset.idx;
         let data = this.list[idx].investorList;
+        let number = this.list[idx].number;
+        let name = this.list[idx].name;
+        let endDate = this.list[idx].endDate;
+        let current = this.list[idx].current;
+        let total = this.list[idx].total;
+        let owner = this.list[idx].owner;
         console.log(data);
         let title = "투자자 목록";
         let content = `<div id="investorPopupList">`;
@@ -40,82 +52,88 @@ export default class common {
                         </div> `
         });
         content += '</div>';
-        this.makePopUp(title, content);
+        this.makePopUp(number, name, endDate, current, total, owner, content);
     }
 
     makeToast(msg) {
         let element = document.createElement("div");
-        element.classList.add("toast");
-        element.id = "toast";
-        element.innerHTML = `
-                                      <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                                        <div class="toast-header">
-                                        <div id="toastRemove"></div>
-                                          <img src="..." class="rounded me-2" alt="...">
-                                          <strong class="me-auto">Bootstrap</strong>
-                                          <small class="text-muted">just now</small>
-                                          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                                        </div>
-                                        <div class="toast-body">
-                                            ${msg}
-                                        </div>
-                                        
-                                      </div>`;
+        element.innerHTML = `<div id="toast">
+                                <button id="toastRemove">
+                                    <i class="fa fa-remove"></i>
+                                </button>
+                                <p>${msg}</p>
+                            </div>`;
 
-        document.querySelector("#wrap").appendChild(element);
-        console.log(element);
         element.querySelector("#toastRemove").addEventListener("click", () => {
+            console.log("!");
             document.querySelector("#wrap").removeChild(document.querySelector("#toast"));
         })
+        document.querySelector("#wrap").appendChild(element.firstChild);
 
 
+        $("#toast").css("right", 50+"px");
+        $("#toast").css("top", 22+"px");
 
-        // $("#toast").css("left", ((($("#wrap").width()/2) - ($("#toast").width())/2))+"px");
-        // document.querySelector("#toast").classList.add("open");
+        console.log(document.querySelector("#toast"))
+        document.querySelector("#toast").classList.add("open");
 
-        // setTimeout(()=> {
-        //     if(document.querySelector("#toast"))
-        //         document.querySelector("#toast").classList.remove("open");
-        // }, 3000, ()=> {
-        //     if(document.querySelector("#toast").document.querySelector("#wrap").removeChild(document.querySelector("#toast")));
-        // });
+        setTimeout(()=> {
+            if(document.querySelector("#toast"))
+                document.querySelector("#toast").classList.remove("open");
+        }, 3000, ()=> {
+            if(document.querySelector("#toast").document.querySelector("#wrap").removeChild(document.querySelector("#toast")));
+        });
     }
 
-    // successMsg(box) {
-    //     console.log("!");
-    //     console.log(box);
-    //     box.querySelector(".formWarningMsg").innerHTML = "";
-    //     box.querySelector(".formWarningMsg").classList.remove("open");
-    //     // box.querySelector(".formInput").classList.remove("warnning");
-    //
-    //     box.querySelector("").classList.remove("");
-    //
-    //     box.querySelector("formInput").classList.add("success");
-    //     box.querySelector("formInputIcon").classList.add("success");
-    //
-    //     if(box.querySelector("formInputIcon").classList.contains("fa-remove"));
-    //         box.querySelector("formInputIcon").classList.replace("fa-remove", "fa-check");
-    //
-    //     if(!document.querySelector("warningMsg"))
-    //         document.querySelector(".form__btn").classList.add("success");
-    //     else document.querySelector(".form__btn").classList.remove("success");
-    //
-    // }
+    successMsg(box) {
+        box.querySelector(".formWarningMsg").innerHTML = "";
+        box.querySelector(".formWarningMsg").classList.remove("open");
+        box.querySelector(".form-control").classList.remove("warning");
+        box.querySelector(".formInputIcon").classList.remove("warning");
+
+        box.querySelector(".form-control").classList.add("success");
+        box.querySelector(".formInputIcon").classList.add("success");
+        if(box.querySelector(".formInputIcon").classList.contains("fa-remove"));
+            box.querySelector(".formInputIcon").classList.replace("fa-remove", "fa-check");
+
+        if(!document.querySelector("form .warning"))
+            document.querySelector(".btn").classList.add("success");
+        else document.querySelector(".btn").classList.remove("success");
+
+    }
 
     warningMsg(box, msg) {
+        console.log(box);
         box.querySelector(".formWarningMsg").innerHTML = msg;
         box.querySelector(".formWarningMsg").classList.add("open");
         box.querySelector(".form-control").classList.add("warning");
-        // box.querySelector(".formInputIcon").classList.add("warning");
-        // box.querySelector(".formInputIcon").classList.replace("fa-check", "fa-remove");
+        box.querySelector(".formInputIcon").classList.add("warning");
+        box.querySelector(".formInputIcon").classList.replace("fa-check", "fa-remove");
 
-        // if(!document.querySelector("warningMsg"))
-        //     document.querySelector(".form__btn").classList.add("success");
-        // else document.querySelector("form__btn").classList.remove("sucess");
+        if(!document.querySelector("form .warning"))
+            document.querySelector(".btn").classList.add("success");
+        else document.querySelector(".btn").classList.remove("success");
     }
 
-    // toast() {
-    //
-    //
-    // }
+    toast() {
+        let id = new Date().getTime();
+        let toast = `<div class="toast" id=${id}>
+                        <div class="toast-header d-between">
+                            <strong>form 오류</strong>
+                            <button class="close">x</button>
+                        </div>
+                        <div class="toast-body">
+                            입력하신 정보가 양식과 일치하지 않습니다.
+                        </div>
+                    </div>`;
+        $("#toast_content").append(toast);
+        $(`#${id}`).toast({
+            autohide: true,
+            delay: 3000
+        });
+        $(`#${id} button`).on("click", function() {
+            $(`#${id}`).remove();
+        });
+        $(`#${id}`).toast("show");
+    }
 }

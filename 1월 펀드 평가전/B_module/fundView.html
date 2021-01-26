@@ -9,11 +9,12 @@
     <script src="./js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/page.css">
     <link rel="stylesheet" href="./css/sub.css">
     <title>킥스타터</title>
 </head>
 <body>
-<div class="wrap">
+<div id="wrap" class="wrap">
     <input type="checkbox" id="open-aside" hidden>
     <!-- 헤더 영역 -->
     <header>
@@ -85,19 +86,32 @@
         <div class="inner d-center">
             <div class="title">Fund View</div>
         </div>
-        <div class="investor__list wrap d-around">
+        <div class="investor__list">
             <div class="item">
-                <ul>
-                    <li>펀드번호</li>
-                    <li>창업펀드명</li>
-                    <li>모집마감일</li>
-                    <li>모집금액</li>
-                    <li>현재금액</li>
-                </ul>
-                <div class="readMore d-center">자세히보기</div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                <div class="img">
+                    <img src="./images/stock.jpg" alt="">
                 </div>
+                <div class="txt">
+                    <div class="txt-p">
+                        <strong>마감한 펀드</strong>
+                        <p class="sub mt-2">
+                            123
+                            <br/>
+                            dd
+                        </p>
+                        <div class="price mt-3">
+                            230,000원
+                        </div>
+                        <div class="date mt-3">
+                            ㅇㅇ
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                    <div class="readMore__btn d-center">투자하기</div>
+                </div>
+
             </div>
             <div class="item">
                 <ul>
@@ -113,34 +127,8 @@
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
                 </div>
             </div>
-            <div class="item">
-                <ul>
-                    <li>펀드번호</li>
-                    <li>창업펀드명</li>
-                    <li>모집마감일</li>
-                    <li>모집금액</li>
-                    <li>현재금액</li>
-                </ul>
-                <div class="readMore d-center">자세히보기</div>
 
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
-                </div>
-            </div>
-            <div class="item">
-                <ul>
-                    <li>펀드번호</li>
-                    <li>창업펀드명</li>
-                    <li>모집마감일</li>
-                    <li>모집금액</li>
-                    <li>현재금액</li>
-                </ul>
-                <div class="readMore d-center">자세히보기</div>
 
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
-                </div>
-            </div>
 
         </div>
         <div class="page__nation wrap d-around">

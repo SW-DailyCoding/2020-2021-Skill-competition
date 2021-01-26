@@ -88,45 +88,70 @@
         </div>
         <div class="form_box wrap">
             <form id="register">
-                <div class="input-group input-group-sm mb-3">
-                    <p class="fund__num form-label">펀드번호</p>
-                    <input type="text" class="form-control success" id="fund__num" disabled>
-                    <i class="fa fa-check formInputIcon success"></i>
+                <div class="formGroup">
+                    <div class="input-group input-group-sm mb-2">
+                        <p class=" form-label">펀드번호</p>
+                        <input type="text" class="form-control success" id="fund__num" name="fund__num" disabled>
+                        <i class="fa fa-check formInputIcon success"></i>
+                        <br/>
+                    </div>
                     <p class="formWarningMsg"></p>
                 </div>
 
-
-                <div class="input-group input-group-sm mb-3">
-                    <p class="found__fund form-label">창업펀드</p>
-                    <input type="text" class="form-control" id="found__fund">
-                    <i class="fa fa-check formInputIcon success"></i>
+                <div class="formGroup">
+                    <div class="input-group input-group-sm mb-2">
+                        <p class="found__fund form-label">창업펀드</p>
+                        <input type="text" class="form-control" name="found__fund" id="found__fund">
+                        <i class="fa fa-check formInputIcon"></i>
+                    </div>
                     <p class="formWarningMsg"></p>
                 </div>
 
-                <div class="input-group input-group-sm mb-3">
-                    <p class="dead__line form-label" >모집마감일</p>
-                    <input type="text" class="form-control" id="dead__line">
+                <div class="formGroup">
+                    <div class="input-group input-group-sm mb-2">
+                        <p class="dead__line form-label" >모집마감일</p>
+                        <input type="datetime-local" class="form-control" id="dead__line" step="1">
+                        <i class="fa fa-check formInputIcon"></i>
+                    </div>
+                    <p class="formWarningMsg"></p>
                 </div>
 
-                <div class="input-group input-group-sm mb-3">
-                    <p class="price form-label" >모집금액</p>
-                    <input type="number" class="form-control" id="price">
+                <div class="formGroup">
+                    <div class="input-group input-group-sm mb-2">
+                        <p class="price form-label" >모집금액</p>
+                        <input type="number" class="form-control" id="price">
+                        <i class="fa fa-check formInputIcon"></i>
+                    </div>
+                    <p class="formWarningMsg"></p>
                 </div>
 
-                <div class="input-group input-group-sm mb-3">
-                    <p class="exp form-label" name="exp">상세설명 <span id="word">0</span> / 500</p>
-                    <textarea  class="form-control" id="exp" name="exp"></textarea>
+                <div class="formGroup">
+                    <div class="input-group input-group-sm mb-2">
+                        <p class="exp form-label" name="exp">상세설명 <span id="word">0</span> / 500</p>
+                        <textarea  class="form-control" id="exp" name="exp" col="30" row="10"></textarea>
+                        <i class="fa fa-check formInputIcon"></i>
+                    </div>
+                    <p class="formWarningMsg"></p>
                 </div>
 
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">펀드이미지</label>
-                    <input class="form-control" type="file" id="formFile">
+                <div class="formGroup">
+                    <div class="mb-2 input-group mb-2 ">
+                        <label for="formFile" class="form-label">펀드이미지</label>
+                        <input class="form-control" type="file" id="formFile">
+                        <i class="fa fa-check formInputIcon"></i>
+                    </div>
+                    <p class="formWarningMsg"></p>
                 </div>
-                <button class="form__btn" type="submit">작성 완료</button>
+
+                <button class="form__btn btn" type="submit">작성 완료</button>
             </form>
         </div>
     </div>
     <!-- /등록 영역 -->
+
+    <div id="toast_content">
+
+    </div>
 
 </div>
 <!-- 푸터 영역 -->

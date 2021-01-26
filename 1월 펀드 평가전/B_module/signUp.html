@@ -9,11 +9,12 @@
     <script src="./js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/page.css">
     <link rel="stylesheet" href="./css/sub.css">
     <title>킥스타터</title>
 </head>
 <body>
-<div class="wrap">
+<div id="wrap" class="wrap">
     <input type="checkbox" id="open-aside" hidden>
     <!-- 헤더 영역 -->
     <header>
@@ -89,31 +90,40 @@
     </div>
     <div class="sign wrap container">
 <!--        <div class="sign__title d-center mt-5">Sign Up</div>-->
-        <form>
-            <div class="input-group input-group-sm mb-3">
-                <input type="email" class="form-control" name="signEmail" id="signEmail" placeholder="이메일을 입력해주세요" >
+        <form class="signForm">
+            <div class="formGroup">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="email" class="form-control" name="signEmail" id="signEmail" placeholder="이메일을 입력해주세요" >
+                    <i class="fa fa-check formInputIcon"></i>
+                </div>
                 <p class="formWarningMsg"></p>
             </div>
 
-            <div class="input-group input-group-sm mb-3">
-                <input type="text" class="form-control" name="signName" id="signName" placeholder="이름을 입력해주세요">
+            <div class="formGroup">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" name="signName" id="signName" placeholder="이름을 입력해주세요">
+                    <i class="fa fa-check formInputIcon"></i>
+                </div>
                 <p class="formWarningMsg"></p>
             </div>
 
-
-            <div class="input-group input-group-sm mb-3">
-                <input type="password" class="form-control" name="signPassword" id="signPassword" placeholder="비밀번호를 입력해주세요">
+            <div class="formGroup">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="password" class="form-control" name="signPassword" id="signPassword" placeholder="비밀번호를 입력해주세요">
+                    <i class="fa fa-check formInputIcon"></i>
+                </div>
                 <p class="formWarningMsg"></p>
             </div>
 
-            <div class="input-group input-group-sm mb-3">
-                <input type="password" class="form-control" name="signPasswordc" id="signPasswordc" placeholder="비밀번호 확인을 해주세요">
+            <div class="formGroup">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="password" class="form-control" name="signPasswordc" id="signPasswordc" placeholder="비밀번호 확인을 해주세요">
+                    <i class="fa fa-check formInputIcon"></i>
+                </div>
                 <p class="formWarningMsg"></p>
             </div>
 
-            <div class="sign__btn d-center">
-                <button href="#">SIGN UP</button>
-            </div>
+            <button id="sign__btn" class="sign__btn btn d-center" type="submit">SIGN UP</button>
         </form>
 
 
@@ -143,11 +153,12 @@
 
 </footer>
 <script type="module" src="./js/common.js"></script>
+<script type="module" src="./js/signUp.js"></script>
 <script type="module" src="./js/main.js"></script>
 <script type="module" src="./js/view.js"></script>
 <script type="module" src="./js/register.js"></script>
 <script type="module" src="./js/investor.js"></script>
-<script type="module" src="./js/signUp.js"></script>
+
 <script type="module" src="./js/app.js"></script>
 </body>
 

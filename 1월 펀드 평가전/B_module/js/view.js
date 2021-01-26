@@ -15,32 +15,42 @@ export default class view {
         this.list.forEach(x=>{
             let fund = this.viewTemplate(x);
             FundViewBox.appendChild(fund);
-            fund.querySelector(".fundMoreBtn").addEventListener("click",this.system.investor_list_popup_more);
-            if(fund.querySelector(".fundBtn"))fund.querySelector(".fundBtn").addEventListener("click",this.view_fund_popup);
+            fund.querySelector(".viewMore").addEventListener("click",this.common.investorPopup);
+            if(fund.querySelector(".fundItem__btn"))fund.querySelector(".fundItem__btn").addEventListener("click",this.viewPopup);
             this.fundBar(fund.querySelector(".progress"));
         });
     }
 
-    viewTemplate({name, current, total, number, endDate, attain, idx}) {
+    viewTemplate({name, current, owner, total, number, endDate, photo, attain, idx}) {
         let now = new Date();
         let date = new Date(endDate);
         let element = document.createElement("div");
         let content = '';
         content = `<div class="item">
-                    <ul>
-                        <li>${number}</li>
-                        <li>${name}</li>
-                        <li>${endDate}</li>
-                        <li>${total.toLocaleString()}</li>
-                        <li>${current.toLocaleString()}</li>
-                    </ul>`;
-        if(now < date ) content += `<button data-idx="${idx}" class="fundItem__btn">투자하기</button>`
-        else content += `<p class="fundEnd"> 모집완료</p>`;
-        content += `<div data-idx="${idx}" class="readMore d-center">자세히보기</div>
-                    <div class="progress" data-attain="${attain}">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${attain}%</div>
-                    </div>
-                </div>`;
+                        <div class="img">
+                            <img src="${photo}" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="txt-p">
+                                <div class="tit mb-1 d-between"><p>${number}</p><p data-idx="${idx}" class="viewMore">상세보기</p></div>
+                                <strong>${name}</strong>
+                                <p class="sub mt-1">
+                                    ${owner}
+                                </p>
+                                <div class="price mt-3">
+                                    ${current.toLocaleString()} / ${total.toLocaleString()}
+                                </div>
+                                <div class="date mt-3 mb-2">
+                                    ${endDate}
+                                </div>
+                            </div>
+                            <div class="progress" data-attain="${attain}">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${attain.toLocaleString()}%</div>
+                            </div>
+                            `;
+        if(now < date ) content += `<div data-idx="${idx}" class="readMore__btn d-center fundItem__btn">투자하기</div>`
+        else content += `<p class="readMore__btn d-center fundEnd"> 모집완료</p>`;
+        content += `</div>`;
         element.innerHTML = content;
         return element.firstChild;
     }
@@ -64,47 +74,46 @@ export default class view {
         let title = "투자 펀딩 계약서";
         let content = `<form id="viewForm">
                             <div class="formGroup">
-                                <label for="viewNumber" class="formLabel">펀드번호</label>
-                                <p class="formCondition"></p>
-                                <div class="formInputBox">
-                                    <input type="email" class="formInput success" name="viewNumber" id="viewNumber" value="${number}" disabled>
+                                <div class="input-group input-group-sm mb-2">
+                                    <p class=" form-label">펀드번호</p>
+                                    <input type="text" class="form-control success" id="fund__num" name="fund__num" value="${number}" disabled>
                                     <i class="fa fa-check formInputIcon success"></i>
+                                    <br/>
                                 </div>
-                                <p class="formWarnningMsg"></p>
+                                <p class="formWarningMsg"></p>
                             </div>
                             <div class="formGroup">
-                                <label for="viewName" class="formLabel">창업펀드명</label>
-                                <p class="formCondition"></p>
-                                <div class="formInputBox">
-                                    <input type="text" class="formInput success" name="viewName" id="viewName" value="${name}" disabled>
-                                    <i class="fa fa-check formInputIcon success"></i>
-                                </div>
-                                <p class="formWarnningMsg"></p>
-                            </div>
-                            <div class="formGroup">
-                                <label for="viewUser" class="formLabel">투자자명</label>
-                                <p class="formCondition"></p>
-                                <div class="formInputBox">
-                                    <input type="text" class="formInput" name="viewUser" id="viewUser" placeholder="투자자명">
+                                <div class="input-group input-group-sm mb-2">
+                                    <p class="found__fund form-label">창업펀드</p>
+                                    <input type="text" class="form-control" name="found__fund" id="found__fund" value="${name}">
                                     <i class="fa fa-check formInputIcon"></i>
                                 </div>
-                                <p class="formWarnningMsg"></p>
+                                <p class="formWarningMsg"></p>
                             </div>
                             <div class="formGroup">
-                                <label for="viewMoney" class="formLabel">투자금액</label>
-                                <p class="formCondition"></p>
-                                <div class="formInputBox">
-                                    <input type="number" class="formInput" name="viewMoney" id="viewMoney" placeholder="투자금액" max="${total}" min="1">
+                                <div class="input-group input-group-sm mb-2">
+                                    <p class="price form-label" >투자자명</p>
+                                    <input type="text" class="form-control" id="viewUser">
                                     <i class="fa fa-check formInputIcon"></i>
+                                    <p class="formWarningMsg"></p>
                                 </div>
-                                <p class="formWarnningMsg"></p>
+                                <p class="formWarningMsg"></p>
                             </div>
                             <div class="formGroup">
-                                <label for="viewSign" class="formLabel">서명</label>
+                                <div class="input-group input-group-sm mb-2">
+                                    <p class="price form-label" >투자금액</p>
+                                    <input type="number" class="form-control" id="viewMoney">
+                                    <i class="fa fa-check formInputIcon"></i>
+                                    <p class="formWarningMsg"></p>
+                                </div>
+                                <p class="formWarningMsg"></p>
+                            </div>
+                            <div class="formGroup">
+                                <label for="viewSign" class="formLabel mb-3">서명</label>
                                 <p class="formCondition"></p>
                                 <div class="formInputBox">
                                     <div id="viewSign">
-                                        <canvas id="viewFormSign" class="warnning"></canvas>
+                                        <canvas id="viewFormSign" class="warning"></canvas>
                                         <div id="viewSignWeightBox">
                                             <label for="viewSignWeight" id="viewSignWeightLabel">서명굵기</label>
                                             <div id="viewSignWeightInput">
@@ -118,10 +127,9 @@ export default class view {
                                                 <span>px</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <i class="fa fa-check formInputIcon"></i>
+                                    </div><i class="fa fa-check formInputIcon"></i>
+                                    <p class="formWarningMsg"></p>
                                 </div>
-                                <p class="formWarnningMsg"></p>
                             </div>
                             <div id="viewPopupButtonBox">
                                 <button id="viewFundBtn" class="viewPopupBtn">투자</button>
@@ -132,7 +140,7 @@ export default class view {
 
         this.common.makePopUp(title,content);
 
-        document.querySelector("#viewCloseBtn").addEventListener("click",e=>{e.preventDefault();this.system.popup_close_process();})
+        document.querySelector("#viewCloseBtn").addEventListener("click",e=>{e.preventDefault();this.common.popupRemove();})
         $("#viewUser").on("propertychange change keyup paste",e=>{
             if(e.keyCode === 13)e.preventDefault();
             this.viewPopup_input(e.target);
@@ -218,54 +226,58 @@ export default class view {
         this.signDrow_flag = 0;
 
         canvas.parentNode.parentNode.querySelector(".formInputIcon").classList.add("success");
-        canvas.classList.remove("warnning");
+        canvas.classList.remove("warning");
+        console.log(canvas);
         this.viewPopup_input(canvas);
     }
 
     viewPopup_input(target) {
-        let box = target.parentNode.parentNode;
+        console.log(target);
+        let box = target.parentNode;
         if(target.id === "viewFormSign"){
-            box = box.parentNode;
-            if(target.classList.contains("warnning")){
-                box.querySelector(".formWarnningMsg").innerHTML = "서명을 입력해주세요!";
-                box.querySelector(".formWarnningMsg").classList.add("open");
+            box = box.parentNode
+            console.log(box);
+            if(target.classList.contains("warning")){
 
-                box.querySelector(".formInputIcon").classList.add("warnning");
+                box.querySelector(".formWarningMsg").innerHTML = "서명을 입력해주세요!";
+                box.querySelector(".formWarningMsg").classList.add("open");
+
+                box.querySelector(".formInputIcon").classList.add("warning");
                 box.querySelector(".formInputIcon").classList.replace("fa-check","fa-remove");
             }else{
-                box.querySelector(".formWarnningMsg").innerHTML = "";
-                box.querySelector(".formWarnningMsg").classList.remove("open");
+                box.querySelector(".formWarningMsg").innerHTML = "";
+                box.querySelector(".formWarningMsg").classList.remove("open");
 
-                box.querySelector(".formInputIcon").classList.remove("warnning");
+                box.querySelector(".formInputIcon").classList.remove("warning");
                 box.querySelector(".formInputIcon").classList.add("success");
                 if(box.querySelector(".formInputIcon").classList.contains("fa-remove")) box.querySelector(".formInputIcon").classList.replace("fa-remove","fa-check");
             }
         }else{
             let val = target.value;
 
-            if(val.trim().length < 1) return this.system.form_warnning_msg(box,"값을 입력해주세요!");
-            else if(target.id === "viewUser" && val.match(/^[a-zA-Zㄱ-ㅎㅏ-ㅣ가-힣 ]+$/g) === null) return this.system.form_warnning_msg(box,"투자자명은 한글, 영문, 띄어쓰기만 입력가능합니다!");
-            else if(target.id === "viewMoney" && val.match(/^\d+$/g) === null) return this.system.form_warnning_msg(box,"자연수만 입력할 수 있습니다!");
+            if(val.trim().length < 1) return this.common.warningMsg(box,"값을 입력해주세요!");
+            else if(target.id === "viewUser" && val.match(/^[a-zA-Zㄱ-ㅎㅏ-ㅣ가-힣 ]+$/g) === null) return this.common.warningMsg(box,"투자자명은 한글, 영문, 띄어쓰기만 입력가능합니다!");
+            else if(target.id === "viewMoney" && val.match(/^\d+$/g) === null) return this.common.warningMsg(box,"자연수만 입력할 수 있습니다!");
             else if(target.id === "viewMoney" && Number(val) > 1000000) return target.value = parseInt(target.getAttribute("max"));
-            else this.common.success(box);
+            else this.common.successMsg(box);
         }
     }
 
 
     viewSend = e => {
         e.preventDefault();
-
         this.viewPopup_input(document.querySelector("#viewFormSign"));
         this.viewPopup_input(document.querySelector("#viewUser"));
         this.viewPopup_input(document.querySelector("#viewMoney"));
-        if(document.querySelector("#viewForm .warnning")){
-            document.querySelectorAll("#viewForm .warnning").forEach(x=>{
-                x.classList.remove("warnning");
-                setTimeout(()=>{x.classList.add("warnning")},200);
+        if(document.querySelector("#viewForm .warning")){
+            document.querySelectorAll("#viewForm .warning").forEach(x=>{
+                console.log(x);
+                x.classList.remove("warning");
+                setTimeout(()=>{x.classList.add("warning")},200);
             });
 
             return this.common.makeToast("모든 올바른 값을 입력해주세요!");
-        }
+        } else location.href = "index.html";
     }
 
 }

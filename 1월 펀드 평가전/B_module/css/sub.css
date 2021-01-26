@@ -7,6 +7,7 @@
     color: var(--black) !important;
     font-family: "나눔고딕", sans-serif;
 }
+*:focus { outline: none !important }
 
 body {
     background: #F7F8F9;
@@ -223,7 +224,7 @@ aside {
 .readMore {
     margin-top: 30px;
     border: 1px solid #fff;
-    width: 220px; height: 60px;
+    width: 300px; height: 60px;
     padding: 5px 45px;
     color: #fff !important;
     font-size: 0.8em;
@@ -255,13 +256,21 @@ aside {
 /* /공용*/
 
 /* 펀드 등록 */
-.register form {
-    width: 1200px; height: 600px;
+.register {
+    width: 1200px; height: 800px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    padding: 150px;
     position: relative;
 }
 
+.register .inner {
+    padding-top: 80px;
+}
+
+.register .form {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 .form .form-control { width: 400px; !important; padding: 40px !important; }
 form .form-label {margin-right: 50px;}
 form .form-label {margin-right: 50px;}
@@ -269,15 +278,19 @@ form .form-label:nth-child(6) { margin-bottom: 40px;}
 .register .form-label {
     display: block;
 }
-form .form__btn { width: 140px; height: 50px; padding: 10px 20px; position: absolute; right: 150px; outline: none; border: 1px solid transparent;
+form .form__btn { width: 140px; height: 50px; padding: 10px 20px; position: absolute; bottom: 30px; right: 140px; outline: none; border: 1px solid transparent;
     background: var(--blue) !important; color: #fff !important; border-radius: 60px}
 /* /펀드 등록 */
 
 /* 펀드 보기 */
 
-.fund__view .item { position: relative; height: 330px !important;}
-.item .readMore { position: absolute; top: 200px; width: 200px;
-    background: var(--blue) !important;}
+.fund__view .item { position: relative;}
+.item .readMore__btn {
+    background: var(--blue) !important; padding: 20px 10px; color: #fff !important}
+.item .readMore__btn:hover {
+    transition: all .3s;
+    opacity: 0.6;
+}
 
 .loading { margin-top: 40px;}
 .loading__bar { border: 1px solid var(--blue) !important; width: 100px; height: 30px;
@@ -306,25 +319,74 @@ form .form__btn { width: 140px; height: 50px; padding: 10px 20px; position: abso
 .sort ul li {
     margin-right: 20px;
 }
-.investor__list .item {
-    margin-top: 60px;
-    border: 1px solid #eee;
-    width: 200px; height: 300px;
-    background: #EFF1F6 !important;
-    cursor: pointer;
-}
-.investor__list .item ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
+.investor__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.investor__list .item ul li {
-    margin: 10px;
+.investor__list .tit {
+    font-size: .8rem;
+    font-weight: 500;
+    color: #232A4F !important;
 }
-.page__nation { margin-top: 40px; cursor: pointer}
+
+.investor__list .progress {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.investor__list .progress-bar {
+    background: #232A4F !important;
+    color: #fff !important;
+}
+
+.investor__list .item {
+    margin-top: 60px;
+    width: 300px; height: 400px;
+    /*background: #EFF1F6 !important;*/
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.investor__list .item .img {
+    width: 300px;
+    height: 180px;
+}
+
+.investor__list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.investor__list .item .txt {
+    border: 1px solid #e0e0e0;
+}
+
+.investor__list .item .txt-p {
+    padding: 20px 25px 30px;
+}
+
+.investor__list .item .sub {
+    font-size: 1rem;
+
+    color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.investor__list .price {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.investor__list .date {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.75) !important;
+}
+
+
+.page__nation { margin-top: 120px; cursor: pointer}
 .prev, .next { font-size: 1.3em; font-weight: 600; color: var(--blue) !important}
 .page__nation .number { margin-top: 20px;}
 .page__nation .number li { padding: 10px 20px; border: 1px solid #aaa; cursor: pointer}
@@ -334,18 +396,28 @@ form .form__btn { width: 140px; height: 50px; padding: 10px 20px; position: abso
 /* 회원가입 */
 
 .sign input{
-    border: 0;
+
     /*box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;*/
     border-bottom: 3px solid var(--blue) !important;
+    border: 0;
     margin-bottom: 15px;
-    width: 1200px;
+    width: 800px;
     height: 80px;
     padding: 40px 40px;
     /*border-radius: 10px;*/
     outline: none;
     background: transparent !important;
 }
-
+.sign .formInputIcon {
+    margin-left: 1400px;
+    margin-top: 15px;
+}
+.sign input:focus {
+    border-width: 10px;
+}
+.sign .form-control {
+    width: 200px;
+}
 .sign__btn {
 
 }
@@ -388,4 +460,10 @@ footer .copyright { font-size: 15px; color: #aaa !important; margin-left: 20px;}
 
 .progress {
     margin-top: 40px;
+}
+
+#toast_content {
+    position: fixed;
+    right: 5vw; bottom: 10vh;
+    z-index: 100000;
 }
