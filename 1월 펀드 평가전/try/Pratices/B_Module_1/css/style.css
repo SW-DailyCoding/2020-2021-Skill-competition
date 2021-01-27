@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #222;
+    font-family: "나눔고딕", sans-serif;
+}
+
+ul, ol { list-style: none; color: var(--black) !important}
+a { color: var(--black) !important; text-decoration: none;}
+a:hover {text-decoration: none !important; opacity: .6;}
+
+:root {
+    --blue: blue;
+    --black: #222;
+}
+
+
+#menuOpenInput{display: none;}
+#menuOpen{
+    display: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#menuOpen > i{
+    font-size: 1.6em;
+    pointer-events: none;
+}
+
+#menuOpen:hover{opacity: 0.6;}
+
+.etc > a{
+    font-size: 0.9em;
+    transition: .3s all;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.etc > a:hover{
+    background-color: #eee;
+}
+
+.pointer {  cursor: pointer; }
+.pointer:hover { opacity: .6; } 
+.d-between { display: flex; justify-content: space-between; align-items: center;}
+.d-around { display: flex; justify-content: space-around; align-items: center;}
+.d-center { display: flex; justify-content: center; align-items: center;}
+.d-colum { display: flex; flex-direction: column;}
+.d-end { display: flex; justify-content:flex-end; align-items: flex-end;}
+.btn { border: 1px solid #222 !important; border-radius: 40px !important; background: #fff !important; outline: none !important;}
+
+.wrap { margin: 20 auto; width: 100%; }
+
+header ul li { margin-left: 20px;}
+.etc li { cursor: pointer; border: 1px solid #222; background: #222; border-radius: 20px; padding: 10px 20px;}
+.etc li a { color: #fff !important}
+
+#visual { height: 700px; position: relative; background-image: url(../resource/images/sample13.jpg);}
+#visual .visual-txt { position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%);}
+#visual .visual-txt p { font-size: 2.4rem; font-weight: bold; }
+
+
+.fund-section-title { font-size: 2.5rem; font-weight: bold; }
+.fund-section-subtitle { font-size: 1.3vw;}
+.fund-section-list .item{ width: 90vw; height: 500px;}
+.fund-section-list .view { cursor: pointer; }
+.fund-section-list .item .img { width: 30vw; height: 15vw; overflow: hidden;}
+.fund-section-list .item .img img { width: 100%; height : 100%; object-fit: cover;}
+.fund-section-list .item .item-name { font-size: 1.6rem; font-weight: bolder;}
+
+.fund-view-list { display: grid; grid-template-columns: repeat(2, 1fr);}
+.fund-view-list .item-inner { width: 25vw;}
+.fund-view-list .item{ width: 20vw; height: 500px;}
+.fund-view-list .item .img { width: 10vw; height: 15vw; overflow: hidden;}
+.fund-view-list .item .img img { width: 100%; height : 100%; object-fit: cover;}
+.fund-view-list .item .item-name { font-size: 1.8rem; font-weight: bolder;}
+.page-nation .number { border: 1px solid #222; padding: 10px 20px; }
+
+
+@media screen and (max-width:800px){
+
+    header{
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+        width: 100%; 
+    }
+
+    #menuOpenInput{
+        display: block;
+        visibility: hidden;
+        pointer-events: none;
+        color: #222;
+        /* z-index: 120; */
+    }
+
+    #menuOpen{display: inline-block;}
+    
+    .nav{
+        position: fixed !important;
+        width: 480px !important;
+        height: calc(100% - 80px) !important;
+        background-color: #f3f3f3 !important;
+        top:80px !important;
+        left: -480px;
+        transition: .3s !important;
+        flex-direction: column !important;
+    }
+
+    .nav > ul {flex-direction: column !important;}
+    .nav li{ margin-top: 20px; } 
+
+    .etc{
+        width: 480px;
+        height: 50px;
+        position: fixed;
+        background-color: #f3f3f3;
+        top: calc(100% - 50px);
+        right: -480px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+        transition: .3s;
+    }
+
+    #menuOpenInput:checked ~ .nav{left: 0;}
+    #menuOpenInput:checked ~ .etc{right: 0;}
+    
+    #visual { margin-top: -20px;}
+
+    .page-nation .number-box {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .item-content {
+        margin-left: 0px !important;
+    }
+   
+
+    .fund-view-list .item .img  {
+        display: none;
+    }
+}
+footer { height: 80px; background: #eee;}
+
