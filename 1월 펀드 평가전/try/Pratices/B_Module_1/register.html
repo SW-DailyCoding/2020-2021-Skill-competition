@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <sciprt src="./resource/bootstrap-4.3.1-dist/js/bootstrap.js"></sciprt>
     <title>킥스타터</title>
 </head>
+
 <body>
     <div id="wrap" class="wrap">
         <header class="d-around">
@@ -65,7 +67,8 @@
                         <label for="registerDate" class="formLabel">모집마감일</label>
                         <p class="formCondition"></p>
                         <div class="formInputBox">
-                            <input type="datetime-local" id="registerDate" name="registerDate" class="formInput" step="1">
+                            <input type="datetime-local" id="registerDate" name="registerDate" class="formInput"
+                                step="1">
                             <!-- <i class="fa fa-check formInputIcon"></i> -->
                         </div>
                         <p class="joinWarnningMsg"></p>
@@ -83,7 +86,8 @@
                         <label for="registerComment" class="formLabel">상세설명</label>
                         <p class="formCondition"></p>
                         <div class="formInputBox">
-                            <textarea name="registerComment" id="registerComment" class="formInput" cols="30" rows="10"></textarea>
+                            <textarea name="registerComment" id="registerComment" class="formInput" cols="30"
+                                rows="10"></textarea>
                             <!-- <i class="fa fa-check formInputIcon"></i> -->
                         </div>
                         <p class="joinWarnningMsg"></p>
@@ -102,7 +106,8 @@
                 </form>
             </div>
         </div>
-    </div>    
+    </div>
+    <div id="toast_cotainer"></div>
     <footer class="d-center">
         Copyright Gondr Allright reserved. Since 2017-03-01
     </footer>
@@ -114,4 +119,5 @@
     <sciprt type="module" src="./js/investor.js"></sciprt>
     <sciprt type="module" src="./js/signUp.js"></sciprt>
 </body>
+
 </html>
