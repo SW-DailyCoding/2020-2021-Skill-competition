@@ -1,51 +1,96 @@
-export default class signUp {
-    constructor(list, common) {
-        this.list = list;
-        this.common = common;
-
+class App {
+    constructor() {
+        console.log("!");
+        this.init();
     }
 
-    signLoading() {
-        document.querySelectorAll("input").forEach(x => {
-            $(x).on("propertychange change keyup paste input", e => {
-                if(e.keyCode === 13) e.preventDefault();
-                    this.signInput(e.target);
-            })
+    init() {
+
+        let email = document.querySelector("#joinEmail");
+        let name = document.querySelector("#joinName");
+        let password = document.querySelector("#joinPassword");
+        let password2 = document.querySelector("#joinPasswordCh");
+
+        password.addEventListener("input", e => { this.passwordCheck(e) })
+
+        email.addEventListener("input", () => {
+            let regExp = /^[a-zA-Z0-9\_]+@[a-zA-Z0-9\_]+\.[a-z]{2,3}$/;
+            if(regExp.test(email.value)) {
+                email.setCustomValidity("");
+                email.reportValidity();
+            }
         })
-        document.querySelector("#sign__btn").addEventListener("click", this.signSend);
-    }
-
-    signInput(target) {
-        let box = target.parentNode.parentNode;
-        console.log(box);
-        let val = target.value;
-        let reg2ID = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-        let reg2PD = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,10}$/;
-
-        let regID = /^[0-9a-zA-Z\_]+@[0-9a-zA-Z\_]+\.[a-z]{2,3}$/g;
-        let regPD1 = /\d+/g;
-        let regPD2 = /[a-zA-Z]+/g;
-        let regPD3 = /[!@#$%^&*()]+/g;
-
-        if(val.trim().length < 1)
-            return this.common.warningMsg(box, "값을 입력해주세요");
-        else if(target.id == "signEmail" && (val.match(regID) == null)) return this.common.warningMsg(box, "올바른 이메일을 입력해주세요.");
-        else if(target.id == "signPassword" && (val.match(regPD1) == null || val.match(regPD2) == null || val.match(regPD3) == null)) return this.common.warningMsg(box, "비밀번호는 영문, 특수문자[!@#$%^&*()] 숫자 형식에 맞춰 입력해주세요.");
-        else if(target.id == "signPasswordc" &&  document.querySelector("#signPassword").value !== val)
-            return this.common.warningMsg(box, "비밀번호가 일치하지 않습니다.");
-
-        else return this.common.successMsg(box);
-    }
-
-    signSend = e => {
-        e.preventDefault();
-        document.querySelectorAll(".form-control").forEach(x => {
-            this.signInput(x);
+        
+        document.querySelector("#joinBtn").addEventListener("click", () => {
+            if(email.value == "" || name.value == "" || password.value == "" || password2.value == "") {
+                var regExp = /^[a-zA-Z0-9\!\@\#\$\%\^\&\*\(\)]+$/;
+                if(!regExp.test(input.value))
+                    $(".toast").toast("show");
+            }
         })
-        if(document.querySelector(".form-control.warning")) {
-            return this.common.toast();
-        } else location.href = "index.html";
-            // return this.common.makeToast("올바른 값을 입력해주세요.");
-
     }
+
+    passwordCheck(e) {
+        console.log("!");
+        let input = e.target;
+        console.log(input);
+
+        let regExp = /^[a-zA-z0-9\!\@\#\$\%\^\&\*\(\)]+$/;
+
+        if(!regExp.test(input.value)) {
+            e.target.setCustomValidity("영문, 숫자, 특수문자만 입력해주세요");
+            input.reportValidity();
+        } else {
+            e.target.setCustomValidity("");
+            input.reportValidity();
+        }
+    }
+
+    // toast() {
+    //     let id = new Date().getTime();
+    //     let toast = `<div class="toast" id=${id}>
+    //                     <div class="toast-header d-between">
+    //                         <strong>form 오류</strong>
+    //                         <button class="close">x</button>
+    //                     </div>
+    //                     <div class="toast-body">
+    //                         입력하신 정보가 양식과 일치하지 않습니다.
+    //                     </div>
+    //                 </div>`;
+    //     $("#toast_container").append(toast);
+    //     $(`#${id}`).toast({
+    //         autohide: true,
+    //         delay: 3000
+    //     });
+    //     $(`#${id} button`).on("click", function() {
+    //         $(`#${id}`).remove();
+    //     });
+    //     $(`#${id}`).toast("show");
+    // }
+
+    // succes() {
+    //     let id = new Date().getTime();
+    //     let toast = `<div class="toast" id=${id}>
+    //                     <div class="toast-header d-between">
+    //                         <strong>form 오류</strong>
+    //                         <button class="close">x</button>
+    //                     </div>
+    //                     <div class="toast-body">
+    //                        성공하셨습니다
+    //                     </div>
+    //                 </div>`;
+    //     $("#toast_container").append(toast);
+    //     $(`#${id}`).toast({
+    //         autohide: true,
+    //         delay: 3000
+    //     });
+    //     $(`#${id} button`).on("click", function() {
+    //         $(`#${id}`).remove();
+    //     });
+    //     $(`#${id}`).toast("show");
+    // }
+}
+
+window.onload = function() {
+    let app = new App();
 }

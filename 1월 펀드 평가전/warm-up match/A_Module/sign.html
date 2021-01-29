@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./resource/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./resource/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <title>킥스타터</title>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <header class="d-around">
+            <input type="checkbox" name="menuOpen" id="menuOpenInput">
+            <label for="menuOpenInput" id="menuOpen">
+                <i class="fa fa-navicon"></i>
+            </label>
+            <a href="./index.html" class="logo pointer">
+                <img src="./resource/logo2.svg" height="80" alt="">
+            </a>
+            <ul class="nav d-center">
+                <li><a href="./index.html">메인페이지</a></li>
+                <li><a href="./register.html">펀드등록</a></li>
+                <li><a href="./view.html">펀드보기</a></li>
+                <li><a href="./investor.html">투자자목록</a></li>
+            </ul>
+            <ul class="etc d-center">
+                <li><a href="./sign.html">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">관리자</a></li>
+            </ul>
+        </header>
+        <div id="visual">
+            <div class="visual-txt">
+                <p>킥스타터에 오신걸 환영합니다</p>
+            </div>
+        </div>
+        <div class="fund-section">
+            <div class="fund-section-title d-center mt-5 mb-2">회원가입</div>
+            <div class="fund-section-subtitle d-center mb-5">로그인하기 전에 회원가입은 필수입니다!</div>
+            <div class="fund-section-list d-colum d-center mb-5">
+                <form id="joinForm">
+                    <div class="formGroup">
+                        <label for="joinEmail" class="formLabel">이메일</label>
+                        <p class="formCondition"></p>
+                        <div class="formInputBox">
+                            <input type="email" class="formInput" name="joinEmail" id="joinEmail" placeholder="이메일">
+                            <!-- <i class="fa fa-check formInputIcon"></i> -->
+                        </div>
+                        <p class="joinWarnningMsg"></p>
+                    </div>
+                    <div class="formGroup">
+                        <label for="joinName" class="formLabel">이름</label>
+                        <p class="formCondition"></p>
+                        <div class="formInputBox">
+                            <input type="text" class="formInput" name="joinName" id="joinName" placeholder="이름">
+                            <!-- <i class="fa fa-check formInputIcon"></i> -->
+                        </div>
+                        <p class="joinWarnningMsg"></p>
+                    </div>
+                    <div class="formGroup">
+                        <label for="joinPassword" class="formLabel">비밀번호</label>
+                        <div class="formInputBox">
+                            <input type="password" class="formInput" name="joinPassword" id="joinPassword" placeholder="비밀번호">
+                            <!-- <i class="fa fa-check formInputIcon"></i> -->
+                            <p class="formCondition">*비밀번호는 영문, 숫자, 특수문자를 조합해야 합니다.</p>
+                        </div>
+                        <p class="joinWarnningMsg"></p>
+                    </div>
+                    <div class="formGroup">
+                        <label for="joinPasswordCheck" class="formLabel">비밀번호 확인</label>
+                        <p class="formCondition"></p>
+                        <div class="formInputBox">
+                            <input type="password" class="formInput" name="joinPasswordCh" id="joinPasswordCh" placeholder="비밀번호 확인">
+                            <!-- <i class="fa fa-check formInputIcon"></i> -->
+                        </div>
+                        <p class="joinWarnningMsg"></p>
+                    </div>
+                    <button id="joinBtn" class="formBtn btn">회원가입</button>
+                </form>
+            </div>
+        </div>
+    </div>    
+    <footer class="d-center">
+        Copyright Gondr Allright reserved. Since 2017-03-01
+    </footer>
+</body>
+</html>

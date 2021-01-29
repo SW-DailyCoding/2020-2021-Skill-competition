@@ -2,29 +2,21 @@
 
 use App\Router;
 
+Router::get("/", "ViewController@indexPage");
+// Router::post("/detail", "ViewController@detailPage");
 
-Router::get("/","ViewController@index");
-Router::get("/index","ViewController@index");
-Router::get("/view","ViewController@view");
-Router::get("/investor","ViewController@investor");
+Router::get("/sign", "ActionController@signPage");
+Router::post("/sign", "ActionController@sign");
+Router::get("/login", "ActionController@loginPage");
+Router::post("/login", "ActionController@login");
+Router::get("/logout", "ActionController@logout");
+Router::get("/view", "ViewController@viewPage");
+Router::get("/investor", "ViewController@investorPage");
 
-Router::post("/fundListLoad","ActionController@fundListLoad");
-Router::post("/user","ActionController@userPageList");
-Router::get("/user","ViewController@user");
+Router::get("/profile", "ViewController@profilePage");
+Router::get("/admin", "ViewController@adminPage");
 
-Router::get("/sign","ViewController@sign","guest");
-Router::post("/sign","ActionController@sign","guest");
-Router::get("/login","ViewController@login","guest");
-Router::post("/login","ActionController@login","guest");
-
-Router::get("/logout","ActionController@logout","user");
-Router::get("/register","ViewController@register","user");
-Router::post("/register","ActionController@register","user");
-Router::post("/fundEnd","ActionController@fundDelete","user");
-Router::post("/viewFund","ActionController@investorsAdd","user");
-Router::post("/viewBusiness","ActionController@viewBusiness","user");
-
-Router::get("/admin","ViewController@admin","admin");
-Router::post("/adminFundClose","ActionController@adminFundClose","admin");
+Router::get("/register", "ViewController@registerPage");
+Router::post("/insert/fund", "ViewController@insertFund");
 
 Router::start();

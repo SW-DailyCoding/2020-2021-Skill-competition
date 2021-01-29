@@ -1,65 +1,37 @@
-<link rel="stylesheet" href="/css/page.css">
-<link rel="stylesheet" href="/css/sub.css">
+<div class="fund-section">
+            <div class="fund-section-title d-center mt-5 mb-2">로그인</div>
+            <div class="fund-section-subtitle d-center mb-5">로그인하기 전에 회원가입은 필수입니다!</div>
+            <div class="fund-section-list d-colum d-center mb-5">
+                <form id="joinForm" action="/login" method="post">
+                    <div class="formGroup">
+                        <label for="joinEmail" class="formLabel">이메일</label>
+                        <p class="formCondition"></p>
+                        <div class="formInput form-controlBox">
+                            <input type="text" class="formInput form-control" name="joinEmail" id="joinEmail" placeholder="이메일" required>
+                            <!-- <i class="fa fa-check formInput form-controlIcon"></i> -->
+                        </div>
+                        <p class="joinWarnningMsg"></p>
+                    </div>
+                    <div class="formGroup">
+                        <label for="password" class="formLabel">비밀번호</label>
+                        <div class="formInput form-controlBox">
+                            <input type="password" class="formInput form-control" name="password" id="joinPassword" placeholder="비밀번호" required>
+                            <!-- <i class="fa fa-check formInput form-controlIcon"></i> -->
+                        </div>
+                        <p class="joinWarnningMsg"></p>
+                    </div>
+                    <div class="form-group">
+                        <button id="joinBtn" class="formBtn btn">로그인</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+<div id="toast_container"></div>
 
-<!-- 비주얼 영역 -->
-<div class="visual mt-2">
-    <div class="visual__image">
-        <div class="image"></div>
-        <div class="image"></div>
-        <div class="image"></div>
-    </div>
-    <div class="visual__text">
-        <strong>로그인</strong> <br/>
-    </div>
+<div class="toast">
+    <div class="toast-header">
+        <strong class="fs-1 text-blue">form 오류</strong>
+        </div>
+    <div class="toast-body px-3 py-5 text-blue">입력하신 정보가 양식과 일치하지 않습니다.</div>
 </div>
-<!-- /비주얼 영역 -->
-
-<!-- 회원가입 -->
-<div class="sign__wrap mt-5 mb-5 wrap">
-    <div class="inner d-center">
-        <div class="title">login</div>
-    </div>
-    <p class="d-center">환영합니다! 회원가입 이후에 로그인이 가능합니다!</p>
-</div>
-<div class="sign wrap container">
-    <!--        <div class="sign__title d-center mt-5">Sign Up</div>-->
-    <form class="signForm" action="">
-        <div class="formGroup">
-            <div class="input-group input-group-sm mb-3">
-                <input type="email" class="form-control" name="signEmail" id="signEmail" placeholder="이메일을 입력해주세요" >
-                <i class="fa fa-check formInputIcon"></i>
-            </div>
-            <p class="formWarningMsg"></p>
-        </div>
-
-        <div class="formGroup">
-            <div class="input-group input-group-sm mb-3">
-                <input type="text" class="form-control" name="signName" id="signName" placeholder="이름을 입력해주세요">
-                <i class="fa fa-check formInputIcon"></i>
-            </div>
-            <p class="formWarningMsg"></p>
-        </div>
-
-        <div class="formGroup">
-            <div class="input-group input-group-sm mb-3">
-                <input type="password" class="form-control" name="signPassword" id="signPassword" placeholder="비밀번호를 입력해주세요">
-                <i class="fa fa-check formInputIcon"></i>
-            </div>
-            <p class="formWarningMsg"></p>
-        </div>
-
-        <div class="formGroup">
-            <div class="input-group input-group-sm mb-3">
-                <input type="password" class="form-control" name="signPasswordc" id="signPasswordc" placeholder="비밀번호 확인을 해주세요">
-                <i class="fa fa-check formInputIcon"></i>
-            </div>
-            <p class="formWarningMsg"></p>
-        </div>
-
-        <button id="sign__btn" class="sign__btn btn d-center">SIGN UP</button>
-    </form>
-
-
-</div>
-<!-- /회원가입 -->
-<div id="toast_content"></div>
