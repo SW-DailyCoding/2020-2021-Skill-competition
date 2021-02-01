@@ -1,7 +1,9 @@
 # 2020-Skill-competition
 2020년도 기능경기대회 공부란
+
+## 🌳 트리 구조
 ```
-D:.
+.
 ├─A_module
 ├─B_module
 ├─C_module
@@ -43,6 +45,5 @@ D:.
         │  └─investor
         └─B모듈 선수제공파일
             └─js
-
-
+```
 
