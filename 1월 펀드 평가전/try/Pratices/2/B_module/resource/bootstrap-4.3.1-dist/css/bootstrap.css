@@ -2401,7 +2401,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-  color: #212529;
+  color: #fff !important;
   text-decoration: none;
 }
 

@@ -19,13 +19,19 @@ export default class signUp {
         let box = target.parentNode.parentNode;
         console.log(box);
         let val = target.value;
-        let reg2ID = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-        let reg2PD = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,10}$/;
+        // let reg2ID = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+        // let reg2PD = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,10}$/;
 
         let regID = /^[0-9a-zA-Z\_]+@[0-9a-zA-Z\_]+\.[a-z]{2,3}$/g;
         let regPD1 = /\d+/g;
         let regPD2 = /[a-zA-Z]+/g;
         let regPD3 = /[!@#$%^&*()]+/g;
+
+
+
+
+
+        
 
         if(val.trim().length < 1)
             return this.common.warningMsg(box, "값을 입력해주세요");

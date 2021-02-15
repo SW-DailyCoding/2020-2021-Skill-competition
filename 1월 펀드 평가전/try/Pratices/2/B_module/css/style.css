@@ -19,7 +19,7 @@ body {
 ul, ol, li { list-style: none; margin-bottom: 0;}
 a, a:hover { text-decoration: none !important;}
 p, label { margin-bottom: 0;}
-button { user-select: none; bordr: none;
+button { user-select: none; border: none;
     background: transparent;}
 
 .wrap { width: 100%; margin: 0 auto; max-width: calc(100% - 80px) }
@@ -115,7 +115,7 @@ header ul li a{ color: var(--black) !important}
     #menuOpenInput:checked ~ .etc{right: 0;}
 
 }
-
-/* 푸터 영역 */
-
 /* 기타 영역 */
+
+#toast_container { position: fixed; right: 10vw; bottom: 10vh; z-index: 1000;}
+#modal_remove i { color: #fff; width: 20px; height: 20px;}

@@ -3,5 +3,12 @@ export default class Investor {
         this.list = list;
         console.log("!");
         console.log(list);
+
+        // this.app = app;
+
+        this.loading();
+    }
+
+    loading() {
     }
 }
