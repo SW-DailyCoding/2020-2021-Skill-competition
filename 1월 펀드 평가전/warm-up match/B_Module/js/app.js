@@ -58,9 +58,9 @@ class App {
                                         <div class="item-name mb-2">${item.name}</div>
                                         <p class="item-owner">${item.owner}</p>
                                         <p class="item-date">${item.endDate}</p>
-                                        <p class="item-price">${item.current}/ ${item.total}</p>
+                                        <p class="iprogress-bar-striped progress-bar-animatedtem-price">${item.current}/ ${item.total}</p>
                                         <div class="progress">
-                                            <div  class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="${item.attain}" style="width: 100%;">${item.attain}%</div>
+                                            <div  class="progress-bar " aria-valuenow="${item.attain}" style="width: 100%;">${item.attain}%</div>
                                         </div>
                                     </div>
                                 </div> `;

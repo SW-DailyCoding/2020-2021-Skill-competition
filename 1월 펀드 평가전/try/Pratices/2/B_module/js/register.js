@@ -1,25 +1,52 @@
 export default class Register {
-    constructor(list, app) {
+    constructor(list, common) {
         this.list = list;
-        this.app = app;
+        this.common = common;
         this.form = null;
         this.loading();
+        
     }
 
     loading() {
         this.form = document.querySelector("#fund-section");
         this.registerCreate();
 
-        document.querySelectorAll(".form-group").forEach(x=> {
+        document.querySelectorAll("#register .form-group").forEach(x=> {
             if(x.type === 'text' || x.type === 'number' || x.type === 'textarea' ) {
                 $(x).on("propertychange change keyup input", e => {
                     if(e.KeyCode == 13 ) e.preventDefault();
-                    this.registerCreate(e.target);
                 })
             } else $(x).on("change", e => { this.registerForm(e.target)})
         })
+        // document.querySelector("#register_btn").addEventListener("click",  this.registerSend);
     } 
+
+    registerSend = e => {
+        let form = document.querySelectorAll(".form-group input");
+        let textarea = document.querySelector("#fund_txt");
+        let array = [];
+        array.push(form);
+
+        console.log(form);
+        if(!form[0].checkValidity() || !form[1].checkValidity() || !form[2].checkValidity() || !form[3].checkValidity() || !form[4].checkValidity() || !textarea.checkValidity()  ) {
+            this.common.toast();
+        } else {
+            e.preventDefault();
+            location.href = "index.html";
+        }
+    }
     
+    // registerSend = e =>  {
+
+
+    //     if(user_email == "" || user_name == "" || password == "" || passwordc ==  "" || 
+    //     !user_email.checkValidity() || !user_name.checkValidity() || !password.checkValidity() || !passwordc.checkValidity() ) {
+    //         this.common.toast();
+    //     } else {
+    //         e.preventDefault(); location.href="index.html";
+    //     } 
+    // }
+
     registerCreate() {
         let string = "QWERTYUIOPASDFGHJKLZXCVBNM";
         let number = document.querySelector("#fund_num");
@@ -35,13 +62,16 @@ export default class Register {
     registerForm(target) {        
         let id = target.id;
         let val = target.value;
+
         if(id ==="fund_txt")  document.querySelector("#exp").innerHTML = val.length;
-        console.log(target);
+
+        // target.setCustomValidity("가능합니다");
+        // target.reportValidity();
         if(val.trim().length < 1) {
             target.setCustomValidity("값이 비워져 있습니다.");
             target.reportValidity();
         }
-        else if(id === "fund_name" && val.match(/^[a-zA-Zㄱ-ㅎㅏ-ㅣ-가-힣]+$/g) === null) {
+        if(id === "fund_name" && val.match(/^[a-zA-Zㄱ-ㅎㅏ-ㅣ가-힣 ]+$/g) === null) {
             target.setCustomValidity("한글, 영문,공백문자만 입력할 수 있습니다.");    
             target.reportValidity();
         } 
@@ -57,22 +87,29 @@ export default class Register {
             target.setCustomValidity("상세설명은 500자를 초과할 수 없습니다.");
             target.reportValidity();
         }
-        else if(id === "fund_image" && target.files[0].size > 5 * 1024 * 1024)  {
-            console.log("!");
+        else if(id === "fund_image" && target.files[0].size > 5 * 1024 * 1024 && !(target.files[0].name.match(/\.[a-zA-Z]+/g)[0] === ".png" || target.files[0].name.match(/\.[a-zA-Z]+/g)[0] === ".jpg" ) )  {
             target.setCustomValidity("이미지는 5MB 이하의 jpg, png만 업로드 가능합니다.");
             target.reportValidity();
-            document.querySelector(".custom-file-label").innerHTML = target.value;
         }
-        console.log(target.files[0]);
+        else {
+            target.setCustomValidity("");
+            target.reportValidity();
+            
+            let image = document.querySelector("#fund_image");
+            document.querySelector(".custom-file-label").innerHTML = image.value;
+        }
+        // console.log(target.files[0]);
 
-        document.querySelector("#register_btn").addEventListener("click", () => {
-            if(target === "" || !target.checkValidity()) {
-                this.app
-            } else {
-                // e.preventDefault();
-                location.href="naver.com";
-            }
-        })
+        document.querySelector("#register_btn").addEventListener("click",  this.registerSend);
+
+        // document.querySelector("#register_btn").addEventListener("click", () => {
+        //     if(target === "" || !target.checkValidity()) {
+        //         this.app
+        //     } else {
+        //         // e.preventDefault();
+        //         location.href="naver.com";
+        //     }
+        // })
 
         // let name = document.querySelector("#fund_name");
         // let endDate = document.querySelector("#fund_date");

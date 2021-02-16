@@ -21,37 +21,58 @@ class App {
         this.list = data;
         data.forEach((item, i) => {
            item.idx = i;
-           item.strTotal = this.string(item.total);
-           item.strCurrent = this.string(item.current);
            item.attain  = (item.current / item.total) *100;
            console.log(item.attain);
         });
-     
-        this.loading();
+
 
         this.common = new common(this.list);
         this.register = new register(this.list, this.common);
         this.view = new view(this.list);
         this.sign = new sign(this.list, this.common);
         this.investor = new investor(this.list);
-
-        this.list.forEach(item => this.addItem(item));
-    }
-
-    string(item) {
-        return item.toLocaleString("ko-KR");
-    }
     
+        // this.list.sort(function(a, b) {
+        //     console.log(a, b)
+        //     return b.name - a.name;
+        //     this.list.forEach(item => this.addItem(item));
+        // })
+
+        // function des(a, b) {
+        //     var dateA = new Date(a['endDate']).getTime();
+        //     var dateB = new Date(b['endDate']).getTime();
+        //     return dateA < dateB ? 1 : -1;
+        // }
+        // this.list.sort(des);
+
+        this.list.sort(function(a, b) {
+            let dateA = new Date(a['endDate']).getTime();
+            let dateB = new Date(b['endDate']).getTime();
+            return dateA < dateB ? 1 : -1;
+        }) // 내림차순
+        console.log(this.list);
+
+        this.list = this.list.filter(day => new Date(day.endDate) > new Date());
+        this.list.forEach((item, i) => {
+            if(i == 3) return;
+            this.addItem(item);
+        })
+        console.log(this.list);
+        
+        this.loading();
+    }
+
+
     addItem(item) {
         let element = document.createElement("div");
         element.innerHTML = `<div class="item mb-5">
                                                 <p>펀드번호 : ${item.number}</p>
                                                 <p>펀드이름 : ${item.name}</p>
                                                 <p>모집마감일 : ${item.endDate} </p>
-                                                <p>현재금액 : ${item.strCurrent} </p>
+                                                <p>현재금액 : ${item.current.toLocaleString()} </p>
                                                 <div class="progress">
-                                                    <div class="progress-bar" style="" aria-valuenow="${item.attain}">${item.attain}</div>
-                                                </div>
+                                                    <div  class="progress-bar " aria-valuenow="${item.attain}" style="width: 100%;">${item.attain}%</div>
+                                                 </div>
                                                 <div class="view pointer" data-id=${item.idx}  data-toggle="modal" data-target="#invest-view-modal">상세보기버튼</div>
                                             </div> `;
 
@@ -109,41 +130,31 @@ class App {
         })
     }
 
-    toast() {
-        let id = new Date().getTime();
-        let toast = `<div class="toast" id=${id}>
-                        <div class="toast-header d-between">
-                            <strong>form 오류</strong>
-                            <button class="close">x</button>
-                        </div>
-                        <div class="toast-body">
-                            입력하신 정보가 양식과 일치하지 않습니다.
-                        </div>
-                    </div>`;
-        $("#toast_container").append(toast);
-        $(`#${id}`).toast({
-            autohide: true,
-            delay: 3000
-        });
-        $(`#${id} button`).on("click", function() {
-            $(`#${id}`).remove();
-        });
-        $(`#${id}`).toast("show");
-    }
-
     loading() {
+        // setTimeout(() => {
+        //     let progress = document.querySelectorAll(".progress-bar");
+        //     progress.forEach((pro, i) => {
+        //         console.log(pro);
+        //         pro.classList.remove("progress-bar-striped");
+        //         pro.classList.remove("progress-bar-animated");
+        //         pro.style.transition = `${this.list[i].attain/ 50}s`;
+        //         pro.style.width = `${this.list[i].attain}%`;
+        //         pro.innerHTML = `${this.list[i].attain}%`;
+        //     })
+        // }, 3000);
         setTimeout(() => {
             let progress = document.querySelectorAll(".progress-bar");
-            progress.forEach((pro, i) => {
-                console.log(this.list);
-                pro.style.width = `${this.list[i].attain}%`;
-                pro.innerHTML = `${this.list[i].attain}%`;
+            progress.forEach((bar, i) => {
+                // bar.classList.remove("progress-bar-striped");
+                // bar.classList.remove("progress-bar-animated");
+                // bar.style.transition = `${this.list[i].attain/ 50}s`;
+                bar.style.width = `${this.list[i].attain}%`;
+                bar.innerHTML = `${this.list[i].attain}%`;
             })
         }, 3000);
     }
 }
 
-new App();
 window.onload = function() {
     let app = new App();
 }

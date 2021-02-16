@@ -30,7 +30,7 @@ button { user-select: none; border: none;
 .d-element { height: auto; overflow: hidden; }
 .p-center { position: absolute; left: 50%; top:  50%; transform: translate(-50%, -50%)}
 .a-center { display: flex; align-items: center; }
-.t-ellipsis { oveflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.t-ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 
 .t-blue { color: var(--blue); }
 .t-gray { color: var(--gray); }
@@ -71,7 +71,7 @@ button { user-select: none; border: none;
 
 #menuOpenInput { display: none }
 #menuOpen { display: none; transition: .3s }
-#menuOpen > svg { potiner-events: none; }
+#menuOpen > svg { pointer-events: none; }
 
 /* 헤더 영역 */
 header ul li { margin-left: 1rem}

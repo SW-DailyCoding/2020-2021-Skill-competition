@@ -1,4 +1,4 @@
-export default class sign {
+export default class Sign {
     constructor(list, common) {
         this.list = list;
         this.common = common;
@@ -6,11 +6,13 @@ export default class sign {
     }
 
     loading() {
-        document.querySelectorAll(".form-group").forEach(x => {
+        document.querySelectorAll("#sign .form-group").forEach(x => {
             $(x).on("propertychange change keyup paste input", e => {
-                if(e.keycode === 13) 
+                if(e.keycode === 13)  {
                     e.preventDefault();
-                    this.signInput(e.target);
+                } else {
+                    $(x).on("change", e => { this.signInput(e.target)})
+                }
             })
         })
     }
@@ -43,19 +45,99 @@ export default class sign {
         else target.setCustomValidity(""); target.reportValidity();
 
 
-        let form = document.querySelectorAll(".form-group");
-        let user_email = document.querySelector("#user_email")
-        console.log(user_email.checkValidity());
-        document.querySelector("#sign_btn").addEventListener("click", () => {
-            if( !user_email.checkValidity()) {
-                console.log("!")
-                this.common.toast;
-            }  else if (val.match(email) !== null){
-                console.log("!!")
 
-                location.href="index.html";
-            }    
-        })
-       
+        document.querySelector("#sign_btn").addEventListener("click", this.signSend);
+        // document.querySelector("#sign_btn").addEventListener("click", e => {
+        //     form.forEach ( x => {
+        //         array.push(x);
+        //     //     console.log(x.checkValidity())
+        //     //     if( x.checkValidity()  < 4 ) {
+        //     //         this.common.toast();
+        //     //     }  else {
+        //     //         console.log("!");
+        //     //         e.preventDefault();
+        //     //         // location.href="index.html";
+        //     //     }    
+        //     // })
+        //     });
+        //     console.log(array);
+        //     console.log(array[1]);
+        //     // console.log(array.checkValidity())
+        //     // if(!array.checkValidity()) {
+        //     //     this.common.toast();
+        //     // } else {
+        //     //     e.preventDefault();
+        //     //     location.href = "index.html";
+        //     // }
+        // document.querySelector("#sign_btn").addEventListener("click", e => {
+        //     // form.forEach ( x => {
+        //     //     console.log(x.checkValidity())
+        //     //     if( x.checkValidity()  < 4 ) {
+        //     //         this.common.toast();
+        //     //     }  else {
+        //     //         console.log("!");
+        //     //         e.preventDefault();
+        //     //         // location.href="index.html";
+        //     //     }    
+        //     // })
+        //     console.log("!");
+        // })
     }
+
+    signSend = e => {
+        let form = document.querySelectorAll(".form-group input");
+        let array = [];
+        array.push(form);
+
+        if(!form[0].checkValidity() || !form[1].checkValidity() || !form[2].checkValidity() || !form[3].checkValidity() ) {
+            this.common.toast();
+        } else {
+            e.preventDefault();
+            location.href = "index.html";
+        }
+        
+
+    }
+
+    // signSend = e => {
+    //     let form = document.querySelectorAll(".form-group input");
+    //     let array = [];
+
+    //     form.forEach(x => {
+    //         array.push(x);
+    //     })
+    //     // console.log(array[0]);
+    //     if(!array[0].checkValidity || !array[1].checkValidity || array[2].checkValidity || array[3].checkValidity) {
+    //         this.common.toast();
+    //     } else {
+    //         e.preventDefault();
+    //         location.href = "index.html"
+    //     }
+    // }
+
+    // signSend = e => {
+
+        
+
+    //     // let form = document.querySelectorAll(".form-group input");
+    //     // let user_email = document.querySelector("#user_email");
+    //     // let user_name = document.querySelector("#user_name");
+    //     // let password = document.querySelector("#password");
+    //     // let passwordc = document.querySelector("#passwordc");
+        
+    //     // if(user_email == "" || user_name == "" || password == "" || passwordc ==  "" || 
+    //     // !user_email.checkValidity() || !user_name.checkValidity() || !password.checkValidity() || !passwordc.checkValidity() ) {
+    //     //     this.common.toast();
+    //     // } else {
+    //     //     e.preventDefault(); location.href="index.html";
+    //     // } 
+        
+    //     document.querySelector("#sign_btn").addEventListener("click", e => {
+    //         form.forEach ( x => {
+    //             console.log(x.checkValidity())
+    //         })
+    //     })
+
+        
+    // }
 }

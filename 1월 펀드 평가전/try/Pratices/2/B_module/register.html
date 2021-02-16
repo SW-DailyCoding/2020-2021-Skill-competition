@@ -43,8 +43,8 @@
     </div>
 
     <!-- 펀드 섹션 영역 -->
-    <div id="fund-section" class="w-400 wrap d-element pt-5 py-5">
-        <form>
+    <div id="fund-section" class="w-400 wrap d-element pt-5 py-5 register">
+        <form id = "register">
             <div class="form-group">
                 <label for="fund_num">펀드번호</label>
                 <input type="text" id="fund_num" name="fund_num" class="form-control" disabled>
@@ -73,7 +73,7 @@
                 <label for="fund_image">펀드 이미지</label>
                 <div class="custom-file">
                     <input type="file" name="fund_image" id="fund_image" class="custom-file-input" required>
-                    <label for="fund_image" class="custom-file-label">사진을 업로드해주세요</label>
+                    <label for="fund_image" class="custom-file-label t-ellipsis">사진을 업로드해주세요</label>
                 </div>
             </div>
             <button id="register_btn" class="btn">등록하기</button>
