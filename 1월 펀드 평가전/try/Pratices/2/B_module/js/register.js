@@ -1,7 +1,7 @@
 export default class Register {
-    constructor(list, common) {
+    constructor(app,list) {
+        this.app = app;
         this.list = list;
-        this.common = common;
         this.form = null;
         this.loading();
         
@@ -29,7 +29,7 @@ export default class Register {
 
         console.log(form);
         if(!form[0].checkValidity() || !form[1].checkValidity() || !form[2].checkValidity() || !form[3].checkValidity() || !form[4].checkValidity() || !textarea.checkValidity()  ) {
-            this.common.toast();
+            this.app.toast();
         } else {
             e.preventDefault();
             location.href = "index.html";

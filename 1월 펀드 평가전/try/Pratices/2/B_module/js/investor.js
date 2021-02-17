@@ -1,11 +1,12 @@
 export default class Investor {
-    constructor(list) {
+    constructor(app, list) {
+        this.app = app;
         this.list = list;
-        console.log("!");
-        console.log(list);
 
-        // this.app = app;
-
+        // this.list.forEach((item, i) => {
+        //     if(i <5 )
+        //         this.app.addItem(item);
+        // })
         this.loading();
     }
 

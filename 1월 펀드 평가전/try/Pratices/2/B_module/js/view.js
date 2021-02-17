@@ -1,25 +1,17 @@
 export default class View {
-    constructor(list) {
+    constructor(app, list) {
+        this.app = app;
         this.list = list;
-
-        this.list.forEach(x => {
-            
-        })
-        console.log(list);
+        
+       
+        this.loading();
     }
 
     loading() {
-        let box = document.querySelector("#fund-section");
-        box.innerHTML = "";
-
-        // this.list.forEach(x => {
-        //     let fund = this.view
-        // })
+        // let box = document.querySelector("#fund-section");
+        // box.innerHTML = "";
     }
 
-    addItem(item) {
-
-    }
 
     insertModal(e) {
         console.log(e);

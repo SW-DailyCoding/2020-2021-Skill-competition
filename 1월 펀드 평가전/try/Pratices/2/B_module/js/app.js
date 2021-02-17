@@ -2,16 +2,13 @@ import investor from './investor.js';
 import sign from './sign.js';
 import view from './view.js';
 import register from './register.js';
-import common from './common.js';
-
 class App {
     constructor() {
         this.investor = null;
         this.sign = null;
         this.view = null;
         this.register = null;
-        this.common = null;
-        
+
         fetch("./resource/js/fund.json")
         .then(res => res.json()) 
         .then(data => this.init(data));
@@ -22,16 +19,15 @@ class App {
         data.forEach((item, i) => {
            item.idx = i;
            item.attain  = (item.current / item.total) *100;
-           console.log(item.attain);
         });
 
+        // this.list.sort(function(a, b) {
+        //     let dateA = new Date(a['endDate']).getTime();
+        //     let dateB = new Date(b['endDate']).getTime();
+        //     return dateA < dateB ? 1 : -1;
+        // }) // 내림차순
+        
 
-        this.common = new common(this.list);
-        this.register = new register(this.list, this.common);
-        this.view = new view(this.list);
-        this.sign = new sign(this.list, this.common);
-        this.investor = new investor(this.list);
-    
         // this.list.sort(function(a, b) {
         //     console.log(a, b)
         //     return b.name - a.name;
@@ -46,22 +42,45 @@ class App {
         // this.list.sort(des);
 
         this.list.sort(function(a, b) {
-            let dateA = new Date(a['endDate']).getTime();
-            let dateB = new Date(b['endDate']).getTime();
-            return dateA < dateB ? 1 : -1;
+            return  new Date(a['endDate']).getTime() <  new Date(b['endDate']).getTime() ? 1 : -1;
         }) // 내림차순
-        console.log(this.list);
 
-        this.list = this.list.filter(day => new Date(day.endDate) > new Date());
-        this.list.forEach((item, i) => {
-            if(i == 3) return;
-            this.addItem(item);
-        })
-        console.log(this.list);
+
+        this.investor = new investor(this,this.list);
+        this.view = new view(this, this.list);
+        this.register = new register(this, this.list);
+        this.sign = new sign(this, this.list);   
         
+        this.fund_index = document.querySelector("#fund_index");
+        this.fund_investor = document.querySelector("#fund_investor");
+        this.fund_view = document.querySelectorAll("#fund_view");
+
+        if(this.fund_index) {
+            this.list = this.list.filter(day => new Date(day.endDate) > new Date());
+            console.log(this.list);
+            this.list.forEach((item, i) => {
+                if(i < 4 ) this.addItem(item);            
+            })
+        } else if(this.fund_investor) {
+            this.list.forEach((item, i) => {
+                if(i < 5 ) this.addItem(item);            
+            })
+        } else if(this.fund_view) {
+            this.list.forEach((item, i) => {
+                if(i < 4) this.addItem(item);
+            })
+        }
+
+        
+        
+        // if(this === "App" ) {
+        //     console.log(this.app[0])
+        //     this.list.forEach((item, i) => {
+        //         if(i < 3) return;this.addItem(item);
+        //     })
+        // }
         this.loading();
     }
-
 
     addItem(item) {
         let element = document.createElement("div");
@@ -75,39 +94,45 @@ class App {
                                                  </div>
                                                 <div class="view pointer" data-id=${item.idx}  data-toggle="modal" data-target="#invest-view-modal">상세보기버튼</div>
                                             </div> `;
-
-        document.querySelector(".fund-list").appendChild(element);
+    
+        let fund_list =  document.querySelector(".fund-list");
+        if(fund_list) fund_list.appendChild(element);
         element.querySelector(".view").addEventListener("click", e => {
             this.modal(e);
         })
-
-        
     }
 
+   
     modal(e) {
+        console.log(e.target, e.target.id, e.target.dataset.id);
         let id = e.target.dataset.id;
+        let id2 = e.target.id;
+        console.log(this.list[2].number);
+        console.log(this.list[e.target.dataset.id])
+
+        console.log(this.list, this.list.id, id, this.list[id], id2);
         let modal = document.querySelector("#invest-view-modal .modal-body");
         modal.innerHTML = ` <div class="title">상세보기</div>
                                                 <button class="btn" id="modal_remove"><i class="fa fa-remove">x</i></button>
                                                 <div class="mt-2">
                                                     <small class="text-gray">번호</small>
-                                                    <p class="ml-2 mb-3">${this.list[id].number}</p>
+                                                    <p>${this.list[id].number}</p>
                                                 </div>
                                                 <div class="mt-2">
                                                     <small class="text-gray">펀드명</small>
-                                                    <p class="ml-2 mb-3">${this.list[id].name}</p>
+                                                    <p>${this.list[id].name}</p>
                                                 </div>
                                                 <div class="mt-2">
                                                     <small class="text-gray">창업자명</small>
-                                                    <p class="ml-2 mb-3">${this.list[id].owner}</p>
+                                                    <p>${this.list[id].owner}</p>
                                                 </div>
                                                 <div class="mt-2">
                                                     <small class="text-gray">모집마감일</small>
-                                                    <p class="ml-2 mb-3">${this.list[id].endDate}</p>
+                                                    <p>${this.list[id].endDate}</p>
                                                 </div>
                                                 <div class="mt-2">
                                                     <small class="text-gray">투자자 리스트</small>
-                                                    <div class="investor pt-1 pl-4" style="max-height: 400px; height: auto; overflow-y: scroll;">
+                                                    <div class="investor pt-1 " style="max-height: 400px; height: auto; overflow-y: scroll;">
                                                     </div>
                                                 </div>
                                             </div>`;
@@ -116,18 +141,40 @@ class App {
         let element = document.createElement("div");
         element.innerHTML = `   <div>
                                                     <small class="text-gray">이메일</small>
-                                                    <span class="ml-2 mb-0">${list.email}</span>
+                                                    <span class="ml-2 ">${list.email}</span>
                                                 </div>
                                                 <div class="mt-2">
                                                     <small class="text-gray">투자금액</small>
-                                                    <span class="ml-2 mb-0">${list.pay}</span>
+                                                    <span class="ml-2 ">${list.pay}</span>
                                                 </div>
-                                                <div class="mt-2 mb-2">
+                                                <div class="mt-2 ">
                                                     <small class="text-gray">투자시간</small>
-                                                    <span class="ml-2 mb-0">${list.datetime}</span>
+                                                    <span>${list.datetime}</span>
                                                 </div>`;
         modal.querySelector(".investor").appendChild(element);
         })
+    }
+
+    toast() {
+        let id = new Date().getTime();
+        let toast = `<div class="toast" id=${id}>
+                        <div class="toast-header d-between">
+                            <strong>form 오류</strong>
+                            <button class="close">x</button>
+                        </div>
+                        <div class="toast-body">
+                            입력하신 정보가 양식과 일치하지 않습니다.
+                        </div>
+                    </div>`;
+        $("#toast_container").append(toast);
+        $(`#${id}`).toast({
+            autohide: true,
+            delay: 3000
+        });
+        $(`#${id} button`).on("click", function() {
+            $(`#${id}`).remove();
+        });
+        $(`#${id}`).toast("show");
     }
 
     loading() {
@@ -152,6 +199,7 @@ class App {
                 bar.innerHTML = `${this.list[i].attain}%`;
             })
         }, 3000);
+     
     }
 }
 

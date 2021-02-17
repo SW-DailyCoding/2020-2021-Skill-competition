@@ -1,7 +1,7 @@
 export default class Sign {
-    constructor(list, common) {
+    constructor(app, list) {
+        this.app = app;
         this.list = list;
-        this.common = common;
         this.loading();
     }
 
@@ -86,11 +86,9 @@ export default class Sign {
 
     signSend = e => {
         let form = document.querySelectorAll(".form-group input");
-        let array = [];
-        array.push(form);
 
         if(!form[0].checkValidity() || !form[1].checkValidity() || !form[2].checkValidity() || !form[3].checkValidity() ) {
-            this.common.toast();
+            this.app.toast();
         } else {
             e.preventDefault();
             location.href = "index.html";
