@@ -59,30 +59,22 @@ class App {
             this.list = this.list.filter(day => new Date(day.endDate) > new Date());
             console.log(this.list);
             this.list.forEach((item, i) => {
-                if(i < 4 ) this.addItem(item);            
+                if(i < 4 ) this.addItem(item, i);            
             })
         } else if(this.fund_investor) {
             this.list.forEach((item, i) => {
-                if(i < 5 ) this.addItem(item);            
+                if(i < 5 ) this.addItem(item, i);            
             })
         } else if(this.fund_view) {
             this.list.forEach((item, i) => {
-                if(i < 4) this.addItem(item);
+                if(i < 4) this.addItem(item, i);
             })
         }
 
-        
-        
-        // if(this === "App" ) {
-        //     console.log(this.app[0])
-        //     this.list.forEach((item, i) => {
-        //         if(i < 3) return;this.addItem(item);
-        //     })
-        // }
         this.loading();
     }
 
-    addItem(item) {
+    addItem(item, i) {
         let element = document.createElement("div");
         element.innerHTML = `<div class="item mb-5">
                                                 <p>펀드번호 : ${item.number}</p>
@@ -92,26 +84,25 @@ class App {
                                                 <div class="progress">
                                                     <div  class="progress-bar " aria-valuenow="${item.attain}" style="width: 100%;">${item.attain}%</div>
                                                  </div>
-                                                <div class="view pointer" data-id=${item.idx}  data-toggle="modal" data-target="#invest-view-modal">상세보기버튼</div>
+                                                <div class="view pointer" data-id=${i}  data-toggle="modal" data-target="#invest-view-modal">상세보기버튼</div>
                                             </div> `;
     
         let fund_list =  document.querySelector(".fund-list");
         if(fund_list) fund_list.appendChild(element);
         element.querySelector(".view").addEventListener("click", e => {
+            console.log(e.target);
             this.modal(e);
+            
         })
     }
 
    
     modal(e) {
-        console.log(e.target, e.target.id, e.target.dataset.id);
         let id = e.target.dataset.id;
         let id2 = e.target.id;
-        console.log(this.list[2].number);
-        console.log(this.list[e.target.dataset.id])
-
-        console.log(this.list, this.list.id, id, this.list[id], id2);
+        console.log(this.list, id, this.list[id]);
         let modal = document.querySelector("#invest-view-modal .modal-body");
+        console.log(modal);
         modal.innerHTML = ` <div class="title">상세보기</div>
                                                 <button class="btn" id="modal_remove"><i class="fa fa-remove">x</i></button>
                                                 <div class="mt-2">
