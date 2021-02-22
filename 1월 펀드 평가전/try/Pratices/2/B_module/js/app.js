@@ -12,6 +12,11 @@ class App {
         fetch("./resource/js/fund.json")
         .then(res => res.json()) 
         .then(data => this.init(data));
+
+        this.fund_index = document.querySelector("#fund_index");
+        this.fund_investor = document.querySelector("#fund_investor");
+        this.fund_view = document.querySelector("#fund_view");
+        console.log(document.querySelector("#fund_view"));
     }
 
     init(data) {
@@ -50,10 +55,6 @@ class App {
         this.view = new view(this, this.list);
         this.register = new register(this, this.list);
         this.sign = new sign(this, this.list);   
-        
-        this.fund_index = document.querySelector("#fund_index");
-        this.fund_investor = document.querySelector("#fund_investor");
-        this.fund_view = document.querySelectorAll("#fund_view");
 
         if(this.fund_index) {
             this.list = this.list.filter(day => new Date(day.endDate) > new Date());
@@ -84,25 +85,45 @@ class App {
                                                 <div class="progress">
                                                     <div  class="progress-bar " aria-valuenow="${item.attain}" style="width: 100%;">${item.attain}%</div>
                                                  </div>
-                                                <div class="view pointer" data-id=${i}  data-toggle="modal" data-target="#invest-view-modal">상세보기버튼</div>
+                                                 <div class="item-footer mt-2"></div>
                                             </div> `;
     
-        let fund_list =  document.querySelector(".fund-list");
+       let fund_list =  document.querySelector(".fund-list");
         if(fund_list) fund_list.appendChild(element);
-        element.querySelector(".view").addEventListener("click", e => {
-            console.log(e.target);
-            this.modal(e);
-            
-        })
+
+        if(this.fund_index) {
+            let div =  `<div class="view pointer mb-5" data-id=${i}  data-toggle="modal" data-target="#invest-view-modal">상세보기버튼</div>`;
+            element.innerHTML += div;
+            element.querySelector(".view").addEventListener("click", e => {
+                this.modal(e);
+            })
+        }
+
+        if(this.fund_view) {
+            if(new Date(this.list[i].endDate) <= new Date()) {
+                element.querySelector(".item-footer").innerHTML = `
+                <button class="btn pointer">모집완료</button>;
+                <button class="more_btn btn pointer" data-toggle="modal" data-target="#insert-view-modal" data-id="${item.idx}">모집완료</button>`;
+            } else {
+                element.querySelector(".item-footer").innerHTML = `
+                <button class="invest_btn btn pointer" data-toggle="modal" data-target="#insert-modal" data-id=${item.idx}>투자하기</button>
+                <button class="more_btn btn pointer" data-toggle="modal" data-target="#insert-view-modal" data-id="${item.idx}">상세보기</button>
+                `;
+                element.querySelector(".invest_btn").addEventListener("click", e => this.investModal(e));
+            }
+            element.querySelector(".more_btn").addEventListener("click", e => { this.modal(e)});
+        }
     }
 
-   
+    investModal(e) {
+        
+    }
+
     modal(e) {
         let id = e.target.dataset.id;
-        let id2 = e.target.id;
-        console.log(this.list, id, this.list[id]);
+        console.log(id);
+        console.log(this.list[id]);
         let modal = document.querySelector("#invest-view-modal .modal-body");
-        console.log(modal);
         modal.innerHTML = ` <div class="title">상세보기</div>
                                                 <button class="btn" id="modal_remove"><i class="fa fa-remove">x</i></button>
                                                 <div class="mt-2">
@@ -146,6 +167,7 @@ class App {
         })
     }
 
+
     toast() {
         let id = new Date().getTime();
         let toast = `<div class="toast" id=${id}>
@@ -169,17 +191,6 @@ class App {
     }
 
     loading() {
-        // setTimeout(() => {
-        //     let progress = document.querySelectorAll(".progress-bar");
-        //     progress.forEach((pro, i) => {
-        //         console.log(pro);
-        //         pro.classList.remove("progress-bar-striped");
-        //         pro.classList.remove("progress-bar-animated");
-        //         pro.style.transition = `${this.list[i].attain/ 50}s`;
-        //         pro.style.width = `${this.list[i].attain}%`;
-        //         pro.innerHTML = `${this.list[i].attain}%`;
-        //     })
-        // }, 3000);
         setTimeout(() => {
             let progress = document.querySelectorAll(".progress-bar");
             progress.forEach((bar, i) => {
