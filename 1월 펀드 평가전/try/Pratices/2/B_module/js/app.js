@@ -16,7 +16,6 @@ class App {
         this.fund_index = document.querySelector("#fund_index");
         this.fund_investor = document.querySelector("#fund_investor");
         this.fund_view = document.querySelector("#fund_view");
-        console.log(document.querySelector("#fund_view"));
     }
 
     init(data) {
@@ -102,12 +101,12 @@ class App {
         if(this.fund_view) {
             if(new Date(this.list[i].endDate) <= new Date()) {
                 element.querySelector(".item-footer").innerHTML = `
-                <button class="btn pointer">모집완료</button>;
-                <button class="more_btn btn pointer" data-toggle="modal" data-target="#insert-view-modal" data-id="${item.idx}">모집완료</button>`;
+                <button class="btn pointer">모집완료</button>
+                <button class="more_btn btn pointer" data-toggle="modal" data-target="#insert-view-modal" data-id="${item.idx}">상세보기</button>`;
             } else {
                 element.querySelector(".item-footer").innerHTML = `
-                <button class="invest_btn btn pointer" data-toggle="modal" data-target="#insert-modal" data-id=${item.idx}>투자하기</button>
-                <button class="more_btn btn pointer" data-toggle="modal" data-target="#insert-view-modal" data-id="${item.idx}">상세보기</button>
+                <button class="invest_btn btn pointer" data-toggle="modal" data-target="#insert-modal" data-id="${item.idx}">투자하기</button>
+                <button class="more_btn btn pointer"data-toggle="modal" data-target="#invest-view-modal" data-id="${i}">상세보기</button>
                 `;
                 element.querySelector(".invest_btn").addEventListener("click", e => this.investModal(e));
             }
@@ -116,13 +115,19 @@ class App {
     }
 
     investModal(e) {
-        
+        let id = e.target.dataset.id;
+
+        let num = document.querySelector("#");
+        let name = document.querySelector("#");
+        let price = document.querySelector("#");
+    
+        num.value = this.list[id].num;
+        name.value = this.list[id].name;
+
     }
 
     modal(e) {
         let id = e.target.dataset.id;
-        console.log(id);
-        console.log(this.list[id]);
         let modal = document.querySelector("#invest-view-modal .modal-body");
         modal.innerHTML = ` <div class="title">상세보기</div>
                                                 <button class="btn" id="modal_remove"><i class="fa fa-remove">x</i></button>
@@ -194,9 +199,6 @@ class App {
         setTimeout(() => {
             let progress = document.querySelectorAll(".progress-bar");
             progress.forEach((bar, i) => {
-                // bar.classList.remove("progress-bar-striped");
-                // bar.classList.remove("progress-bar-animated");
-                // bar.style.transition = `${this.list[i].attain/ 50}s`;
                 bar.style.width = `${this.list[i].attain}%`;
                 bar.innerHTML = `${this.list[i].attain}%`;
             })

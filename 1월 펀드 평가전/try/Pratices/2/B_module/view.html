@@ -110,11 +110,6 @@
     </ul>
 </div>
 
-<!-- 푸터 영역 -->
-<footer class="d-center">
-    Copyright Gondr Allright reserved. Since 2017-03-01
-</footer>
-
 <div id="invest-view-modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -130,6 +125,60 @@
         </div>
     </div>
 </div>
+
+<div id="insert-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form action="/insert/investor" method="post">
+                    <div class="form-group">
+                        <label for="invest_num">펀드번호</label>
+                        <input type="text" id="invest_num" name="invest_num" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest_name">펀드이름</label>
+                        <input type="text" id="invest_name" name="invest_name" class="form-control"required>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest_investor">투자자명 </label>
+                        <input type="text" id="invest_investor" name="invest_investor"  class="form-control"required>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest_price">투자금액</label>
+                        <input type="number" id="invest_price" name="invest_price"  class="form-control"required>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="invest_sign">서명</label>
+                            <select name="" id="" class="form-group" aria-placeholder="굵기를 선택해주세요">
+                                <option value="1">1px</option>
+                                <option value="3">3px</option>
+                                <option value="5">5px</option>
+                            </select>
+                        </div>
+                        <canvas width="300" height="150" style="border: 1px solid #aaa"></canvas>
+                        <input type="hidden" name="invest_sign" id="invest_sign">
+                    </div>
+                    <div class="form-group">
+                        <button class="insert-btn btn w-50 d-center">투자</button>
+                    </div>
+                </form>              
+                <div class="form-group">
+                    <button class="close-btn btn w-50 d-center">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 푸터 영역 -->
+<footer class="d-center">
+    Copyright Gondr Allright reserved. Since 2017-03-01
+</footer>
+
+
+
+
 
 <script type="module" src="./js/app.js"></script>
 <script type="module" src="./js/view.js"></script>
