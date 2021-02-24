@@ -91,7 +91,7 @@ class App {
         if(fund_list) fund_list.appendChild(element);
 
         if(this.fund_index) {
-            let div =  `<div class="view pointer mb-5" data-id=${i}  data-toggle="modal" data-target="#invest-view-modal">상세보기버튼</div>`;
+            let div =  `<div class=" w-100 btn view pointer mb-5 "  data-id=${i}  data-toggle="modal" data-target="#invest-view-modal">상세보기버튼</div>`;
             element.innerHTML += div;
             element.querySelector(".view").addEventListener("click", e => {
                 this.modal(e);
@@ -125,7 +125,7 @@ class App {
         let id = e.target.dataset.id;
         let modal = document.querySelector("#invest-view-modal .modal-body");
         modal.innerHTML = ` <div class="title">상세보기</div>
-                                                <button class="btn" id="modal_remove"><i class="fa fa-remove">x</i></button>
+                                                <button class="btn" id="modal_remove"><i class="fa fa-remove"></i></button>
                                                 <div class="mt-2">
                                                     <small class="text-gray">번호</small>
                                                     <p>${this.list[id].number}</p>
