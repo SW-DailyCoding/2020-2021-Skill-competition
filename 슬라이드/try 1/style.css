@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol, li { margin-bottom:0; list-style: none;}
+p, label { margin-bottom: 0;}
+a, a:hover { color: #333}
+button { user-select: none; border: none; background: transparent;}
+
+.d-between { display: flex; justify-content: space-between; align-items: center; }
+.d-around { display: flex; justify-content: space-around; align-items: center; }
+.d-center { display: flex; justify-content: center; align-items: center; }
+.d-colum { display: flex; flex-direction: column;}
+.d-element { height: auto; overflow: hidden;}
+.p-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.a-center { align-items: center;}
+.t-ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.em-08 { font-size: 0.8em}
+.em-085 { font-size: 0.85em}
+.em-09 { font-size: 0.9em}
+.em-095 { font-size: 0.95em}
+.em-1 { font-size: 1em}
+.em-11 { font-size: 1.1em}
+.em-12 { font-size: 1.2em}
+.em-13 { font-size: 1.3em}
+.em-14 { font-size: 1.4em}
+.em-15 { font-size: 1.5em}
+.em-16 { font-size: 1.6em}
+
