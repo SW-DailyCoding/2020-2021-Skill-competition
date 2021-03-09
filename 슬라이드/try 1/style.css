@@ -1,33 +1,527 @@
-@charset "UTF-8";
-
 * {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-ul, ol, li { margin-bottom:0; list-style: none;}
-p, label { margin-bottom: 0;}
-a, a:hover { color: #333}
-button { user-select: none; border: none; background: transparent;}
+.wrap {
+    max-width: 1200px;
 
-.d-between { display: flex; justify-content: space-between; align-items: center; }
-.d-around { display: flex; justify-content: space-around; align-items: center; }
-.d-center { display: flex; justify-content: center; align-items: center; }
-.d-colum { display: flex; flex-direction: column;}
-.d-element { height: auto; overflow: hidden;}
-.p-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
-.a-center { align-items: center;}
-.t-ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+    margin: 50px auto;
+    padding: 0 40px;
+}
 
-.em-08 { font-size: 0.8em}
-.em-085 { font-size: 0.85em}
-.em-09 { font-size: 0.9em}
-.em-095 { font-size: 0.95em}
-.em-1 { font-size: 1em}
-.em-11 { font-size: 1.1em}
-.em-12 { font-size: 1.2em}
-.em-13 { font-size: 1.3em}
-.em-14 { font-size: 1.4em}
-.em-15 { font-size: 1.5em}
-.em-16 { font-size: 1.6em}
+.slide {
+    height: 400px;
+    background-color: #eee;
 
+    position: relative;
+
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.inner {
+    width: 300%;
+    height: 100%;
+
+    display: flex;
+
+    position: absolute;
+}
+
+.image {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.image-1 { background-color: #faa; }
+.image-2 { background-color: #afa; }
+.image-3 { background-color: #aaf; }
+
+/* normal-slide */
+
+#normal-slide > .inner {
+    animation: normal 9s infinite;
+}
+
+/* x% : 100% = 1s : 9s
+100s = 9xs
+x = 11.111... */
+
+@keyframes normal {
+    0% { left: 0%; }
+    22.222% { left: 0%; }
+
+    33.333% { left: -100%; }
+    55.555% { left: -100%; }
+
+    66.666% { left: -200%; }
+    88.888% { left: -200%; }
+
+    100% { left: 0%; }
+}
+
+/*  */
+
+.labels {
+    width: 100%;
+    height: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 10%;
+}
+
+.label, .left-label, .right-label {
+    width: 15px;
+    height: 15px;
+
+    position: relative;
+
+    border: 3px solid #fff;
+
+    margin: 0 4px;
+}
+
+.label > label, .left-label label, .right-label label {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0; top: 0;
+
+    cursor: pointer;
+}
+
+/* 순방향 원본 */
+
+@keyframes move-1-2 {
+    0%      { left: -100%; }
+    22.222% { left: -100%; }
+
+    33.333% { left: -200%; }
+    55.555% { left: -200%; }
+
+    66.666% { left: 0%; }
+    88.888% { left: 0%; }
+
+    100%    { left: -100%; }
+}
+
+@keyframes move-2-3 {
+    0%      { left: -200%; }
+    22.222% { left: -200%; }
+
+    33.333% { left: 0%; }
+    55.555% { left: 0%; }
+
+    66.666% { left: -100%; }
+    88.888% { left: -100%; }
+
+    100%    { left: -200%; }
+}
+
+@keyframes move-3-1 {
+    0%      { left: 0%; }
+    22.222% { left: 0%; }
+
+    33.333% { left: -100%; }
+    55.555% { left: -100%; }
+
+    66.666% { left: -200%; }
+    88.888% { left: -200%; }
+
+    100%    { left: 0%; }
+}
+
+/* 순방향 카피 */
+
+@keyframes move-1-2-copy {
+    0%      { left: -100%; }
+    22.222% { left: -100%; }
+
+    33.333% { left: -200%; }
+    55.555% { left: -200%; }
+
+    66.666% { left: 0%; }
+    88.888% { left: 0%; }
+
+    100%    { left: -100%; }
+}
+
+@keyframes move-2-3-copy {
+    0%      { left: -200%; }
+    22.222% { left: -200%; }
+
+    33.333% { left: 0%; }
+    55.555% { left: 0%; }
+
+    66.666% { left: -100%; }
+    88.888% { left: -100%; }
+
+    100%    { left: -200%; }
+}
+
+@keyframes move-3-1-copy {
+    0%      { left: 0%; }
+    22.222% { left: 0%; }
+
+    33.333% { left: -100%; }
+    55.555% { left: -100%; }
+
+    66.666% { left: -200%; }
+    88.888% { left: -200%; }
+
+    100%    { left: 0%; }
+}
+
+/* 역방향 원본 */
+
+@keyframes move-1-3 {
+    0% { left: 0%; }
+    100% { left: -200%; }
+}
+
+@keyframes move-3-2 {
+    0% { left: -200%; }
+    100% { left: -100%; }
+}
+
+@keyframes move-2-1 {
+    0% { left: -100%; }
+    100% { left: 0%; }
+}
+
+/* 역방향 카피 */
+
+@keyframes move-1-3-copy {
+    0% { left: 0%; }
+    100% { left: -200%; }
+}
+
+@keyframes move-3-2-copy {
+    0% { left: -200%; }
+    100% { left: -100%; }
+}
+
+@keyframes move-2-1-copy {
+    0% { left: -100%; }
+    100% { left: 0%; }
+}
+
+/* target-slide */
+
+#target-slide > .inner {
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-delay: calc(-9s + 1s);
+}
+
+/* 원본 */
+
+/* 순방향 */
+
+#target-1-2:checked ~ #target-slide > .inner { animation-name: move-1-2; }
+#target-2-3:checked ~ #target-slide > .inner { animation-name: move-2-3; }
+#target-3-1:checked ~ #target-slide > .inner { animation-name: move-3-1; }
+
+/* 역방향 */
+
+#target-1-3:checked ~ #target-slide > .inner { animation-name: move-1-3, move-2-3; }
+#target-3-2:checked ~ #target-slide > .inner { animation-name: move-3-2, move-1-2; }
+#target-2-1:checked ~ #target-slide > .inner { animation-name: move-2-1, move-3-1; }
+
+#target-1-3:checked ~ #target-slide > .inner,
+#target-3-2:checked ~ #target-slide > .inner,
+#target-2-1:checked ~ #target-slide > .inner {
+    animation-duration: 1s, 9s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 1s;
+}
+
+/* 카피 */
+
+/* 순방향 */
+
+#target-1-2-copy:checked ~ #target-slide > .inner { animation-name: move-1-2-copy; }
+#target-2-3-copy:checked ~ #target-slide > .inner { animation-name: move-2-3-copy; }
+#target-3-1-copy:checked ~ #target-slide > .inner { animation-name: move-3-1-copy; }
+
+/* 역방향 */
+
+#target-1-3-copy:checked ~ #target-slide > .inner { animation-name: move-1-3-copy, move-2-3-copy; }
+#target-3-2-copy:checked ~ #target-slide > .inner { animation-name: move-3-2-copy, move-1-2-copy; }
+#target-2-1-copy:checked ~ #target-slide > .inner { animation-name: move-2-1-copy, move-3-1-copy; }
+
+#target-1-3-copy:checked ~ #target-slide > .inner,
+#target-3-2-copy:checked ~ #target-slide > .inner,
+#target-2-1-copy:checked ~ #target-slide > .inner {
+    animation-duration: 1s, 9s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 1s;
+}
+
+/* label 원본 */
+
+@keyframes label-1 {
+    0%      { z-index: 1; }
+    22.222% { z-index: 1; }
+
+    33.333% { z-index: 0; }
+    55.555% { z-index: 0; }
+
+    66.666% { z-index: 0; }
+    88.888% { z-index: 0; }
+
+    100%    { z-index: 0; }
+}
+
+@keyframes label-2 {
+    0%      { z-index: 0; }
+    22.222% { z-index: 0; }
+
+    33.333% { z-index: 1; }
+    55.555% { z-index: 1; }
+
+    66.666% { z-index: 0; }
+    88.888% { z-index: 0; }
+
+    100%    { z-index: 0; }
+}
+
+@keyframes label-3 {
+    0%      { z-index: 0; }
+    22.222% { z-index: 0; }
+
+    33.333% { z-index: 0; }
+    55.555% { z-index: 0; }
+
+    66.666% { z-index: 1; }
+    88.888% { z-index: 1; }
+
+    100%    { z-index: 0; }
+}
+
+/* label 복사본 */
+
+@keyframes label-1-copy {
+    0%      { z-index: 1; }
+    22.222% { z-index: 1; }
+
+    33.333% { z-index: 0; }
+    55.555% { z-index: 0; }
+
+    66.666% { z-index: 0; }
+    88.888% { z-index: 0; }
+
+    100%    { z-index: 0; }
+}
+
+@keyframes label-2-copy {
+    0%      { z-index: 0; }
+    22.222% { z-index: 0; }
+
+    33.333% { z-index: 1; }
+    55.555% { z-index: 1; }
+
+    66.666% { z-index: 0; }
+    88.888% { z-index: 0; }
+
+    100%    { z-index: 0; }
+}
+
+@keyframes label-3-copy {
+    0%      { z-index: 0; }
+    22.222% { z-index: 0; }
+
+    33.333% { z-index: 0; }
+    55.555% { z-index: 0; }
+
+    66.666% { z-index: 1; }
+    88.888% { z-index: 1; }
+
+    100%    { z-index: 0; }
+}
+
+.label label {
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+/* 원본 체크 */
+
+/* case-1 */
+#target-2-1:checked ~ #target-slide .label-1-copy { animation-name: label-1; }
+#target-2-1:checked ~ #target-slide .label-2-copy { animation-name: label-2; }
+#target-2-1:checked ~ #target-slide .label-3-copy { animation-name: label-3; }
+
+#target-3-1:checked ~ #target-slide .label-1-copy { animation-name: label-1; }
+#target-3-1:checked ~ #target-slide .label-2-copy { animation-name: label-2; }
+#target-3-1:checked ~ #target-slide .label-3-copy { animation-name: label-3; }
+
+/* case-2 */
+#target-3-2:checked ~ #target-slide .label-1-copy { animation-name: label-3; }
+#target-3-2:checked ~ #target-slide .label-2-copy { animation-name: label-1; }
+#target-3-2:checked ~ #target-slide .label-3-copy { animation-name: label-2; }
+
+#target-1-2:checked ~ #target-slide .label-1-copy { animation-name: label-3; }
+#target-1-2:checked ~ #target-slide .label-2-copy { animation-name: label-1; }
+#target-1-2:checked ~ #target-slide .label-3-copy { animation-name: label-2; }
+
+/* case-3 */
+#target-2-3:checked ~ #target-slide .label-1-copy { animation-name: label-2; }
+#target-2-3:checked ~ #target-slide .label-2-copy { animation-name: label-3; }
+#target-2-3:checked ~ #target-slide .label-3-copy { animation-name: label-1; }
+
+#target-1-3:checked ~ #target-slide .label-1-copy { animation-name: label-2; }
+#target-1-3:checked ~ #target-slide .label-2-copy { animation-name: label-3; }
+#target-1-3:checked ~ #target-slide .label-3-copy { animation-name: label-1; }
+
+/* 카피본 체크 */
+
+/* case-1 */
+#target-2-1-copy:checked ~ #target-slide .label-1 { animation-name: label-1; }
+#target-2-1-copy:checked ~ #target-slide .label-2 { animation-name: label-2; }
+#target-2-1-copy:checked ~ #target-slide .label-3 { animation-name: label-3; }
+
+#target-3-1-copy:checked ~ #target-slide .label-1 { animation-name: label-1; }
+#target-3-1-copy:checked ~ #target-slide .label-2 { animation-name: label-2; }
+#target-3-1-copy:checked ~ #target-slide .label-3 { animation-name: label-3; }
+
+/* case-2 */
+#target-3-2-copy:checked ~ #target-slide .label-1 { animation-name: label-3; }
+#target-3-2-copy:checked ~ #target-slide .label-2 { animation-name: label-1; }
+#target-3-2-copy:checked ~ #target-slide .label-3 { animation-name: label-2; }
+
+#target-1-2-copy:checked ~ #target-slide .label-1 { animation-name: label-3; }
+#target-1-2-copy:checked ~ #target-slide .label-2 { animation-name: label-1; }
+#target-1-2-copy:checked ~ #target-slide .label-3 { animation-name: label-2; }
+
+/* case-3 */
+#target-2-3-copy:checked ~ #target-slide .label-1 { animation-name: label-2; }
+#target-2-3-copy:checked ~ #target-slide .label-2 { animation-name: label-3; }
+#target-2-3-copy:checked ~ #target-slide .label-3 { animation-name: label-1; }
+
+#target-1-3-copy:checked ~ #target-slide .label-1 { animation-name: label-2; }
+#target-1-3-copy:checked ~ #target-slide .label-2 { animation-name: label-3; }
+#target-1-3-copy:checked ~ #target-slide .label-3 { animation-name: label-1; }
+
+/* button-slide */
+
+#button-slide > .inner {
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-delay: calc(-9s + 1s);
+}
+
+/* 원본 */
+
+/* 순방향 */
+
+#button-1-2:checked ~ #button-slide > .inner { animation-name: move-1-2; }
+#button-2-3:checked ~ #button-slide > .inner { animation-name: move-2-3; }
+#button-3-1:checked ~ #button-slide > .inner { animation-name: move-3-1; }
+
+/* 역방향 */
+
+#button-1-3:checked ~ #button-slide > .inner { animation-name: move-1-3, move-2-3; }
+#button-2-1:checked ~ #button-slide > .inner { animation-name: move-2-1, move-3-1; }
+#button-3-2:checked ~ #button-slide > .inner { animation-name: move-3-2, move-1-2; }
+
+#button-1-3:checked ~ #button-slide > .inner,
+#button-3-2:checked ~ #button-slide > .inner,
+#button-2-1:checked ~ #button-slide > .inner {
+    animation-duration: 1s, 9s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 1s;
+}
+
+/* 카피 */
+
+/* 순방향 */
+
+#button-1-2-copy:checked ~ #button-slide > .inner { animation-name: move-1-2-copy; }
+#button-2-3-copy:checked ~ #button-slide > .inner { animation-name: move-2-3-copy; }
+#button-3-1-copy:checked ~ #button-slide > .inner { animation-name: move-3-1-copy; }
+
+/* 역방향 */
+
+#button-1-3-copy:checked ~ #button-slide > .inner { animation-name: move-1-3-copy, move-2-3-copy }
+#button-2-1-copy:checked ~ #button-slide > .inner { animation-name: move-2-1-copy, move-3-1-copy }
+#button-3-2-copy:checked ~ #button-slide > .inner { animation-name: move-3-2-copy, move-1-2-copy }
+
+#button-1-3-copy:checked ~ #button-slide > .inner,
+#button-3-2-copy:checked ~ #button-slide > .inner,
+#button-2-1-copy:checked ~ #button-slide > .inner {
+    animation-duration: 1s, 9s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 1s;
+}
+
+.left-label label, .right-label label {
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+/* 원본 체크 */
+
+/* case-1 */
+#button-2-1:checked ~ #button-slide .label-1-copy { animation-name: label-1; }
+#button-2-1:checked ~ #button-slide .label-2-copy { animation-name: label-2; }
+#button-2-1:checked ~ #button-slide .label-3-copy { animation-name: label-3; }
+
+#button-3-1:checked ~ #button-slide .label-1-copy { animation-name: label-1; }
+#button-3-1:checked ~ #button-slide .label-2-copy { animation-name: label-2; }
+#button-3-1:checked ~ #button-slide .label-3-copy { animation-name: label-3; }
+
+/* case-2 */
+#button-1-2:checked ~ #button-slide .label-1-copy { animation-name: label-3; }
+#button-1-2:checked ~ #button-slide .label-2-copy { animation-name: label-1; }
+#button-1-2:checked ~ #button-slide .label-3-copy { animation-name: label-2; }
+
+#button-3-2:checked ~ #button-slide .label-1-copy { animation-name: label-3; }
+#button-3-2:checked ~ #button-slide .label-2-copy { animation-name: label-1; }
+#button-3-2:checked ~ #button-slide .label-3-copy { animation-name: label-2; }
+
+/* case-3 */
+#button-1-3:checked ~ #button-slide .label-1-copy { animation-name: label-2; }
+#button-1-3:checked ~ #button-slide .label-2-copy { animation-name: label-3; }
+#button-1-3:checked ~ #button-slide .label-3-copy { animation-name: label-1; }
+
+#button-2-3:checked ~ #button-slide .label-1-copy { animation-name: label-2; }
+#button-2-3:checked ~ #button-slide .label-2-copy { animation-name: label-3; }
+#button-2-3:checked ~ #button-slide .label-3-copy { animation-name: label-1; }
+
+/* 카피본 체크 */
+
+/* case-1 */
+#button-2-1-copy:checked ~ #button-slide .label-1 { animation-name: label-1; }
+#button-2-1-copy:checked ~ #button-slide .label-2 { animation-name: label-2; }
+#button-2-1-copy:checked ~ #button-slide .label-3 { animation-name: label-3; }
+
+#button-3-1-copy:checked ~ #button-slide .label-1 { animation-name: label-1; }
+#button-3-1-copy:checked ~ #button-slide .label-2 { animation-name: label-2; }
+#button-3-1-copy:checked ~ #button-slide .label-3 { animation-name: label-3; }
+
+/* case-2 */
+#button-1-2-copy:checked ~ #button-slide .label-1 { animation-name: label-3; }
+#button-1-2-copy:checked ~ #button-slide .label-2 { animation-name: label-1; }
+#button-1-2-copy:checked ~ #button-slide .label-3 { animation-name: label-2; }
+
+#button-3-2-copy:checked ~ #button-slide .label-1 { animation-name: label-3; }
+#button-3-2-copy:checked ~ #button-slide .label-2 { animation-name: label-1; }
+#button-3-2-copy:checked ~ #button-slide .label-3 { animation-name: label-2; }
+
+/* case-3 */
+#button-1-3-copy:checked ~ #button-slide .label-1 { animation-name: label-2; }
+#button-1-3-copy:checked ~ #button-slide .label-2 { animation-name: label-3; }
+#button-1-3-copy:checked ~ #button-slide .label-3 { animation-name: label-1; }
+
+#button-2-3-copy:checked ~ #button-slide .label-1 { animation-name: label-2; }
+#button-2-3-copy:checked ~ #button-slide .label-2 { animation-name: label-3; }
+#button-2-3-copy:checked ~ #button-slide .label-3 { animation-name: label-1; }

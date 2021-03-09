@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;   
+    font-family: "나눔고딕";
+}
+
+:root {
+    --black: #222222 ;
+    --gray: #ddd;
+    --blue: #232A4F;
+    --main: #94775F;
+    --white : #fff
+}
+
+ul, ol, li { list-style: none;}
+a, a:hover { text-decoration: none;}
+button, label, a { cursor: pointer; }
+label, p { margin-bottom: 0}
+
+.wrap { width: 100%; max-width: calc(100% - 80px); margin: 0 auto; }
+.d-between { display: flex; align-items: center; justify-content: space-between; }
+.d-center { display: flex; align-items: center; justify-content: center; }
+.d-end { display:flex; align-items: center; justify-content: flex-end;}
+.d-around { display: flex; align-items: center; justify-content: space-around;}
+.d-element { height: auto; overflow: hidden;}
+.a-center { display: flex; align-items: center;}
+.p-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.t-ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.p-line, .auto-line { white-space: pre-line; }
+
+.t-red { color: var(--red) }
+.border-red { color: var(--red)}
+.t-blue { color: var(--blue) }
+.border-blue { color: var(--blue) }
+.t-black { color: var(--black) }
+.t-main { color: var(--main) }
+.t-white { color: var(--white)}
+
+.t-bold { font-weight: bold;}
+
+.background { z-index: -1 }
+.background img { object-fit: cover;}
+.background::after { content : ''; }
+.background--red { background-color: var(--red); }
+.background--blue { background-attachment: var(--blue);}
+
+.button { padding: 0.5em; font-size: 0.9em; transition: .3s; background: #000; color: #fff}
+.pointer { cursor: pointer;}
+
+@media(max-width: 760px) {
+    .auto-line { white-space: normal; }
+    .wrap { max-width: 100%; padding: 0 20px; }
+}
+
+.em-08 { font-size: 0.8em }
+.em-085 { font-size: 0.85em }
+.em-09 { font-size: 0.9em }
+.em-095 { font-size: 0.95em }
+.em-1 { font-size: 1em }
+.em-11 { font-size: 1.1em }
+.em-12 { font-size: 1.2em }
+.em-14 { font-size: 1.4em }
+.em-16 { font-size: 1.6em }
+.em-18 { font-size: 1.8em }
+.em-2 { font-size: 2em }
+.em-22 { font-size: 2.2em }
+.em-24 { font-size: 2.4em }
+
+.w-400 { width: 400px;}
+.hh-100 { height: 100px; }
+.hh-150 { height: 150px; }
+.hh-200 { height: 200px; }
+.hh-250 { height: 250px; }
+.hh-300 { height: 300px; }
+.hh-350 { height: 350px; }
+.hh-400 { height: 400px; }
+.hh-450 { height: 450px; }
+.hh-500 { height: 500px; }
+.hh-800 { height: 800px; }
+
+#menuOpenInput { display: none}
+#menuOpen { display: none; transition: .3s;}
+#menuOpen > svg { pointer-events: none;}
+
+/* 헤더 영역 */
+header {
+    position: relative;
+    padding-top: 20px;
+    height: 180px;
+    z-index: 1000;
+}
+
+#search {
+    border-radius: 20px;
+}
+
+.nav {
+    border-top: 1px solid #ddd;
+    height: 60%;
+}
+
+.nav__item {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 1em;
+}
+/* /헤더 영역 */
+
+/* 비주얼 영역 */
+.visual {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background: var(--main);
+}
+
+.visual__image .image {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    fliter: brightness(50%);
+    animation: image 10.5s infinite;
+}
+
+.visual_bg {
+    background: var(--blue);
+    position: absolute;
+    top: 0%; left: 0%;
+    height: 600px;
+    width: 100%;
+}
+
+@keyframes image {
+    0% { opacity: 0; }
+    23.809% { opacity: 0; }
+    33.333% { opacity: 1; }
+
+}
+
+.visual__text {
+
+}
+
+.visual__text .text {
+
+}
+
+.icon-bars {
+    display: block;
+    width: 2em; height: 2em;
+}
+
+/* 이달의 축제 영역 */
+#festival {
+    position: relative;
+}
+
+. {
+    position: absolute;
+    left : -150px; top: 50%;
+    transform: rotate(-90deg) translate(-50%, 0%);
+    transform-origin: left top ;
+}
+/* /이달의 축제 영역 */
+
+/* 추천 축제 영역 */
+/* /추천 축제 영역 */
+
+/* 축제 가이드 영역 */
+/* /축제 가이드 영역 */
+
+/* 최근 게시물 영역 */
+/* /최근 게시물 영역 */
+
+/* 푸터 영역 */
+/* /푸터 영역 */
