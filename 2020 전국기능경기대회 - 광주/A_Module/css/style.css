@@ -4,7 +4,7 @@
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;   
-    font-family: "나눔고딕";
+    font-family: "나눔바른고딕";
 }
 
 :root {
@@ -39,7 +39,7 @@ label, p { margin-bottom: 0}
 .t-main { color: var(--main) }
 .t-white { color: var(--white)}
 
-.t-bold { font-weight: bold;}
+.t-bold { font-weight: 600;}
 
 .background { z-index: -1 }
 .background img { object-fit: cover;}
@@ -88,45 +88,57 @@ label, p { margin-bottom: 0}
 /* 헤더 영역 */
 header {
     position: relative;
-    padding-top: 20px;
-    height: 180px;
+    height: 100px;
     z-index: 1000;
+}
+
+.etc { 
+    padding-top: 10px;
+    height: 44px;
+    background-color: var(--main);
 }
 
 #search {
     border-radius: 20px;
 }
 
+#select {
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+}
+
 .nav {
-    border-top: 1px solid #ddd;
     height: 60%;
 }
 
-.nav__item {
-    position: relative;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 1em;
-}
+
 /* /헤더 영역 */
 
 /* 비주얼 영역 */
 .visual {
     position: relative;
-    height: 600px;
+    top: -200px;
+    height: 720px;
     overflow: hidden;
     background: var(--main);
 }
 
-.visual__image .image {
+.visual .inner img:before {
+    content: ""; 
+    width: 100%; height: 100%;
+    z-index:13;
+    background: rgba(0, 0, 0, 0.8);
+}
+.inner .image {
     position: absolute;
     left: 0; top: 0;
     width: 100%; height: 100%;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    fliter: brightness(50%);
-    animation: image 10.5s infinite;
+    /* fliter: brightness(50%); */
+    /* animation: image 10.5s infinite; */
 }
 
 .visual_bg {
@@ -162,11 +174,34 @@ header {
     position: relative;
 }
 
-. {
+.layout {
+    top: -160px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.title { text-align: center;}
+
+.eng_title {
     position: absolute;
     left : -150px; top: 50%;
+
     transform: rotate(-90deg) translate(-50%, 0%);
     transform-origin: left top ;
+}
+
+.line {
+    border-top: 1px solid #ddd;
+    height: 1px; width: 100px;
+    vertical-align: middle;
+}
+
+.content .col-sm {
+    background: #F6F6F6;
+    padding: 40px 20px;
+    margin-left: 20px;
 }
 /* /이달의 축제 영역 */
 
