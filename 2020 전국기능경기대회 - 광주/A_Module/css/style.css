@@ -9,14 +9,14 @@
 
 :root {
     --black: #222222 ;
-    --gray: #ddd;
+    --gray: #F7F7F7;
     --blue: #232A4F;
     --main: #94775F;
     --white : #fff
 }
 
 ul, ol, li { list-style: none;}
-a, a:hover { text-decoration: none;}
+a, a:hover { text-decoration: none; color: var(--black)}
 button, label, a { cursor: pointer; }
 label, p { margin-bottom: 0}
 
@@ -47,8 +47,10 @@ label, p { margin-bottom: 0}
 .background--red { background-color: var(--red); }
 .background--blue { background-attachment: var(--blue);}
 
-.button { padding: 0.5em; font-size: 0.9em; transition: .3s; background: #000; color: #fff}
+.button { padding: 0.6em; font-size: 0.9em; transition: .3s; background: var(--main); color: #fff}
 .pointer { cursor: pointer;}
+
+.button:hover { background: var(--white); color: var(--black); transition: .3s; border-top: 1px solid var(--main);border-bottom: 1px solid var(--main)}
 
 @media(max-width: 760px) {
     .auto-line { white-space: normal; }
@@ -112,6 +114,34 @@ header {
     height: 60%;
 }
 
+.nav_menu {
+    width: 100%;
+    height: 100px;
+    background: var(--gray);
+    position:absolute;
+    top: 100px;
+    left: 0;
+    opacity: 0;
+}
+
+.nav_list {
+    float: left;
+    width: 100%;
+    height: 100px;
+}
+
+.nav_list > li {
+    padding: 25px 50px 0;
+}
+
+.nav_list > li:hover > a, 
+.nav_list > li:active > a  {
+    color: var(--gray);
+}
+
+.nav > li:hover #nav_menu {
+    opacity: 1;
+}
 
 /* /헤더 영역 */
 
@@ -199,9 +229,29 @@ header {
 }
 
 .content .col-sm {
-    background: #F6F6F6;
-    padding: 40px 20px;
+    /* background: #fbfbfb; */
+    /* background: var(--gray); */
     margin-left: 20px;
+    padding:0;
+}
+
+.content .col-sm:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer; 
+    transition: .3s;
+}
+.content_box {
+    padding: 10px 20px;
+    background: var(--gray);
+}
+
+.content .content_img {
+    height: 150px;
+}
+
+.content img {
+    width: 100%; height: 100%;
+    object-fit: cover;
 }
 /* /이달의 축제 영역 */
 
@@ -215,4 +265,8 @@ header {
 /* /최근 게시물 영역 */
 
 /* 푸터 영역 */
+footer {
+    height: 300px;
+    background: var(--main);
+}
 /* /푸터 영역 */
