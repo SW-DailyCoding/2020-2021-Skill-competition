@@ -110,16 +110,26 @@ header {
     color: var(--white);
 }
 
+.logo {
+    width: 150px;
+    /* height: 100px; */
+}
+
+.logo img {
+    object-fit: cover;
+    width: 100%; height: 100%;
+}
+
 .nav {
-    height: 60%;
+    height: 80px;
 }
 
 .nav_menu {
     width: 100%;
-    height: 100px;
+    height: 80px;
     background: var(--gray);
     position:absolute;
-    top: 100px;
+    top: 140px;
     left: 0;
     opacity: 0;
 }
@@ -127,13 +137,18 @@ header {
 .nav_list {
     float: left;
     width: 100%;
-    height: 100px;
+    height: 60px;
 }
 
 .nav_list > li {
     padding: 25px 50px 0;
 }
 
+.nav a {
+    color: var(--white);
+}
+
+.nav_list a { color: var(--black)}
 .nav_list > li:hover > a, 
 .nav_list > li:active > a  {
     color: var(--gray);
@@ -151,24 +166,23 @@ header {
     top: -200px;
     height: 720px;
     overflow: hidden;
-    background: var(--main);
+    /* background: var(--main); */
 }
 
-.visual .inner img:before {
+/* .visual .visual_img:before {
     content: ""; 
-    width: 100%; height: 100%;
-    z-index:13;
+    width: 100%; height: 100%;;
     background: rgba(0, 0, 0, 0.8);
-}
-.inner .image {
+} */
+.visual_img .image {
     position: absolute;
     left: 0; top: 0;
     width: 100%; height: 100%;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    /* fliter: brightness(50%); */
-    /* animation: image 10.5s infinite; */
+    filter: brightness(30%);
+    animation: image 10.5s infinite;
 }
 
 .visual_bg {
@@ -179,19 +193,47 @@ header {
     width: 100%;
 }
 
+.visual_img .image:nth-child(1) { background-image: url(../image/1.jpg); animation-delay: -3.5s; }
+.visual_img .image:nth-child(2) { background-image: url(../image/2.jpg); animation-delay: -0s;}
+.visual_img .image:nth-child(3) { background-image: url(../image/3.jpg); animation-delay: -7s;}
+
 @keyframes image {
-    0% { opacity: 0; }
+    0%      { opacity: 0; }
     23.809% { opacity: 0; }
     33.333% { opacity: 1; }
-
+    57.142% { opacity: 1; }
+    66.666% { opacity: 0; }
+    100%    { opacity: 0; }
 }
 
-.visual__text {
 
+.visual_txt {
+    width: 80%;
 }
 
-.visual__text .text {
+.visual_txt .text {
+    position: absolute;
+    left: 0; top: 0;
+    word-break: keep-all;
+    width: 100%;
+    animation: text 10.5s infinite;
+} 
 
+@keyframes text {
+    0%      { left: -100px; opacity: 0; }
+    23.809% { left: -100px; opacity: 0; }
+    33.333% { left: 0; opacity: 1; }
+    57.142% { left: 0; opacity: 1; }
+    66.666% { left: 100px; opacity: 0; }
+    100%    { left: 100px; opacity: 0; }
+}
+
+.visual_txt .text:nth-child(1) { animation-delay: -3.5s; }
+.visual_txt .text:nth-child(3) { animation-delay: -7s; }
+
+
+.visual_txt strong {
+    color: var(--main);
 }
 
 .icon-bars {
@@ -217,14 +259,20 @@ header {
 .eng_title {
     position: absolute;
     left : -150px; top: 50%;
-
     transform: rotate(-90deg) translate(-50%, 0%);
     transform-origin: left top ;
 }
 
+.eng_title:before{
+    content : " ";
+    width: 1px;
+    height: 80px;
+    background: #000;
+}
+
 .line {
     border-top: 1px solid #ddd;
-    height: 1px; width: 100px;
+    height: 100px; width: 1px;
     vertical-align: middle;
 }
 
@@ -266,7 +314,7 @@ header {
 
 /* 푸터 영역 */
 footer {
-    height: 300px;
+    height: 220px;
     background: var(--main);
 }
 /* /푸터 영역 */
