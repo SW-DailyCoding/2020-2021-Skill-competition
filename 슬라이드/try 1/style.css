@@ -39,17 +39,17 @@
 .image-2 { background-color: #afa; }
 .image-3 { background-color: #aaf; }
 
-/* normal-slide */
+/* nomal-slide */
 
-#normal-slide > .inner {
-    animation: normal 9s infinite;
+#nomal-slide > .inner {
+    animation: nomal 9s infinite;
 }
 
 /* x% : 100% = 1s : 9s
 100s = 9xs
 x = 11.111... */
 
-@keyframes normal {
+@keyframes nomal {
     0% { left: 0%; }
     22.222% { left: 0%; }
 

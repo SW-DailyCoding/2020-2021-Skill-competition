@@ -1,0 +1,45 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 50px auto;
+    padding: 0 40px;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    /* width: 700px; */
+    height: 400px;
+    background: #eee;
+}
+
+.inner {
+    width: 300%; height: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.image {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.image-1 {background: #000;}
+.image-2 {background: #ddd;}
+.image-3 {background: #bc2;}
+
+#common-slide .inner {
+    animation: nomal 9s infinite;
+}
+
+/* 1s :9s =  x : 100*/
+/* 11.11111*/
+
+@keyframes nomal {
+    0% { left: 0%}
+    
+}
