@@ -90,6 +90,7 @@ label, p { margin-bottom: 0}
 .hh-600 { height: 600px; }
 .hh-800 { height: 800px; }
 
+
 #menuOpenInput { display: none}
 #menuOpen { display: none; transition: .3s;}
 #menuOpen > svg { pointer-events: none;}
