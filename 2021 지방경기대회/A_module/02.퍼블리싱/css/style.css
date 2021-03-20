@@ -29,13 +29,14 @@ a, a:hover {text-decoration: none; color: var(--black) }
 button, label, a { cursor: pointer; user-select: none;}
 label, p { margin-bottom: 0}
 
-.wrap { width: 100%;}
+#wrap { width: 100%;}
 
 .d-flex { display: flex; align-items: center;}
 .d-between { display: flex; align-items: center; justify-content: space-between;}
+.d-center { display: flex; align-items: center; justify-content: center;}
 .d-around { display: flex; align-items: center; justify-content: space-around;}
-.d-start { display: flex; align-items: center; justify-content: start;}
-.d-end { display: flex; align-items: center; justify-content: end;}
+.d-start { display: flex; align-items: center; justify-content: flex-start;}
+.d-end { display: flex; align-items: center; justify-content: flex-end;}
 .d-column { display: flex; align-items: center; flex-direction: column;}
 .p-center { position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%}
 .a-center { display: flex; align-items: center;}
@@ -49,7 +50,7 @@ label, p { margin-bottom: 0}
 .t-yellow { color: var(--yellow)}
 .t-red { color: var(--red)}
 .t-green { color: var(--green)}
-.t-white { color: var(--white)}
+.t-white { color: var(--white) !important}
 
 .pointer { cursor: pointer;}
 
@@ -65,6 +66,7 @@ label, p { margin-bottom: 0}
 .em-2 { font-size: 2em}
 .em-22 { font-size: 2.2em}
 .em-24 { font-size: 2.4em}
+.em-3 { font-size: 3em}
 
 .w-400 { width: 400px}
 .hh-100 { height: 100px}
@@ -78,6 +80,7 @@ label, p { margin-bottom: 0}
 .hh-500 { height: 500px}
 
 .mx-20 { max-width: 20%; flex: 0 0 20% }
+.mx-60 { max-width: 60%; flex: 0 0 60% }
 .mx-80 { max-width: 80%; flex: 0 0 80% }
 
 .t-row { 
@@ -95,7 +98,8 @@ label, p { margin-bottom: 0}
 /* 헤더 영역 */
 header { position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; background: #fff;}
 .header_top { height:  40px;}
-.etc select { border: none; background-color: transparent; outline: none;}
+select { border: none; background-color: transparent; outline: none;}
+
 .etc a, select { margin-left: 0.5em}
 .header_bottom { height: 70px;}
 .nav { height: 70px; background: #fff;}
@@ -149,10 +153,7 @@ header { position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; backgroun
         transition: .3s;
         flex-direction: column;
     }
-
-    .menu2 {
-        
-    }
+    .menu2 li {width: 100%; top: 100px;}
 
     #menuOpenInput:checked ~ .nav .menu {
         left: 0;        
@@ -240,6 +241,12 @@ header { position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; backgroun
     width: 105px;
     height: 2px;
 }
+
+.pagination li {
+    border: 1px solid var(--main) ;
+    padding: 0.5em 1em;
+}
+
 /* /공동 영역 */
 
 /* 새소식 영역*/
@@ -252,6 +259,7 @@ header { position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; backgroun
     color: var(--black);
     padding: 0.5em 1em;
     transition: .3s;
+    cursor: pointer;
 }
 
 .tab_btn:hover { 
@@ -259,6 +267,15 @@ header { position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; backgroun
     box-shadow: 8px 8px var(--main); 
     color: #fff;  
     border: 1px solid var(--main)
+}
+
+.active {
+    color: #fff;
+    background-color: var(--main);
+}
+
+.active i, .active a {
+    color: #fff;
 }
 
 .tab_body {
@@ -273,7 +290,7 @@ header { position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; backgroun
     width: 100%;
 }
 
-.tab_body .t-row { transition: 0.8s; }
+.tab_body .t-row { transition: 0.8s; cursor: pointer;}
 .notice .t-row { opacity: 0; }
 .press .t-row { opacity: 0; }
 
@@ -319,4 +336,54 @@ footer a {
     color: #fff;
     padding: 2em 1em;
 }
-/* 푸터 영역 */
+/* /푸터 영역 */
+
+/* 무형문화재 영역*/
+#culture .item {
+    width: 300px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 1em;
+    transition: .3s;
+}
+
+
+#culture .item .item_header {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+#culture .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#culture .item:hover {
+    border: 3px solid var(--gray);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#culture .item:hover img {
+    animation: pa 1s infinite;
+    transition: .3s;
+}
+
+@keyframes pa {
+    0% { transform: scale(1);}
+    70% { transform: scale(1.1);}
+    100% { transform: scale(1);}
+}
+
+/* /무형문화재 영역*/
+
+.table thead th { border-top: 2px solid var(--main); background:  rgb(251, 251, 251);  }
+.tab_day > div { cursor: pointer; }
+.tab_day > div { border-right: 1px solid #aaa; padding-right: 1em}
+.tab_day2 { border-radius: 10px; border:1px solid #ddd;}
+.t_active { background: var(--sub); padding: 20px; border-radius: 10px; } 
+#number .item { border-left: 8px solid var(--sub); border-radius: 6px; padding: 1em 1.5em; border: 1px solid #ddd;}
+#number .item .img { border-radius: 50%; width: 100px; height: 100px; background: #eee;}
+#number .item i { font-size: 2.4em; padding: .8em .95em;}
+/* #number .item img { object-fit: cover; width: 100%; height: 100%; border-radius: 50%;} */
