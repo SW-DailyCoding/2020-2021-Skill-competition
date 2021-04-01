@@ -93,7 +93,7 @@ class App {
                                                                     </div>
                                                                 </div>`);
             $(".culture_body img").on("error", e => {
-                e.target.src = "./images/no-image2.png";
+                e.target.src = "./images/no-image.jpg";
                 // $(e.target).closest(".festival").find(".image-cnt").remove();
             })
         })

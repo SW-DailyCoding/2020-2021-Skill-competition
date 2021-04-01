@@ -2,12 +2,17 @@
     date_default_timezone_set('Asia/Seoul');
 
     require_once VIEW . "/CalController.php";
+<<<<<<< HEAD
     // $day = strtotime( date('Y-m-d', $day) . "+1 months"); 
+=======
+
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
     use App\Controller\CalController;
 
     $c = new CalController();
     // var_dump($c);
 //    if(!['y']) $GET_['y'] = "2021";
+<<<<<<< HEAD
 // var_dump($first2);
     // var_dump($_GET['y']);
     $y = 2021 ? $_GET['y'] : $_GET['y'] ;
@@ -19,6 +24,14 @@
     // var_dump($day);
    
     // var_dump($calenders);
+=======
+
+    $y = 2021 ? $_GET['y'] : $_GET['y'] ;
+    $m =  3 ? 1:  $_GET['m'];
+    $data = $c->makeData($y, $m);
+    // var_dump($data);
+    $day = $data['start']; //달력그리기 시작하는 날짜
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
 ?>
 <div class="my-4 d-end mr-5">
             <i class="fa fa-home mr-3"></i>
@@ -44,13 +57,19 @@
                             <div>
                                 <a href="/y_calender<?=$data['beforeP'] ?>"><i class="fa fa-chevron-left mr-3"></i></a>
                                 <a href="/y_calender<?=$data['nextP'] ?>">
+<<<<<<< HEAD
                                 <i class="fa fa-chevron-right mr-3"></i></a>
+=======
+                                <i class="fa fa-chevron-right mr-3"></i>
+                            </a>
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
                             </div>
                             <div class="em-16 text-center">
                                 <p><?=$y?>년<br/></p>
                             </div>
                             <div class="tab_btn" data-toggle="modal" data-target="#insert-calender">일정등록</div>
                         </div>
+<<<<<<< HEAD
                           
                           
                     <div class="calender_body  mt-5">
@@ -83,6 +102,41 @@
         
                             <div class="c_body mt-3 ">
                             <form action="/update/calenders?id=<?=$calender->id?>" id="update-calender-<?=$calender->id?>" class="modal fade" method="post"  enctype="multipart/form-data">
+=======
+                        <div class="calender_body  mt-5">
+                              <div class="mx-20 em-22"><?=$y?></div>
+                        <?php foreach($calenders as $calender) :?>
+                            <?php for($i = 1; $i < 13; $i++) :?>
+                                <div><?=substr($calender->showDate, 6, 1)?></div>
+                                <?php if($i ==  substr($calender->showDate, 6, 1)) :?>
+                                <?php endif;?>
+                            <?php endfor;?>
+                                        <div class="t-row">                
+                                          
+                                            <div class="mx-60 tex-left">
+                                                <p><?=$calender->showDate?></p> 
+                                                <p>안녕</p> 
+                                            </div>
+                                        </div>
+                                        <?php endforeach;?>
+                            <div class="c_head row ">
+                                
+                            </div>
+                            <div class="c_body mt-3 ">
+                            <?php while($day <= $data['end']) : ?>
+                                <div class="item ">
+                                    <?= date('d', $day) ?> 
+                                    <?php foreach($calenders as $calender) :?>
+                                        <?php if(substr($calender->showDate, 8, 10) == date('d', $day) && substr($calender->showDate, 5, 2) == date('m', $day) ):?>
+                                            <div class="culture_item" data-toggle="modal" data-target="#update-calender-<?=$calender->id?>"><?=$calender->title?></div>
+                                            <!-- <div class="culture_item" data-toggle="modal" data-target="" onclick="location.href='/update/cultures/<?=$calender->id?>'"><?=$calender->title?></div> -->
+                                            <?php endif;?>
+                                        <?php if($calender !==null && $calender->showDate == $day):?>
+                                            <!-- <div class="" onclick="location.href='/cultures/<?=$calender->id?>'"><?=$calender->title?></div> -->
+                                        <?php endif;?>
+
+                                        <form action="/update/calenders?id=<?=$calender->id?>" id="update-calender-<?=$calender->id?>" class="modal fade" method="post"  enctype="multipart/form-data">
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -115,7 +169,18 @@
                                                 </div>
                                             </div>
                                         </form>
+<<<<<<< HEAD
                                         
+=======
+
+                                    <?php endforeach; ?>
+                                </div>
+                                <?php
+                                    $day = strtotime( date('Y-m-d', $day) . "+1 day"); 
+                                ?>
+                            <?php endwhile; ?>
+            
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
                             </div>
                         </div>
                     </div>

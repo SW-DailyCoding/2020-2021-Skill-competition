@@ -48,6 +48,7 @@ function dt($time){
 }
 
 function pagination($data){
+<<<<<<< HEAD
     // var_dump($data);
         define("LIST_LENGTH", 10);
         define("BLOCK_LENGTH", 5);
@@ -69,6 +70,26 @@ function pagination($data){
         $data = array_slice($data, ($page - 1) * LIST_LENGTH, LIST_LENGTH);
 
         return (object)compact("startPage", "endPage", "data", "next", "prev", "page");
+=======
+    define("LIST_LENGTH", 10);
+    define("BLOCK_LENGTH", 5);
+    define("SPACING", 4);
+ 
+    $page = isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] >= 1 ? $_GET['page'] : 1;
+    $totalPage = ceil(count($data) / LIST_LENGTH);
+
+    $startPage = ceil($page * BLOCK_LENGTH ) *BLOCK_LENGTH - SPACING;
+    $endPage = $startPage + SPACING > $totalPage ? $totalPage : $startPage - 1;
+
+    $prev = true;
+    $next = true;
+
+    if($startPage == 1 ) $next = false;
+    if($totalPage == $endPage) $prev = false;
+
+    $data = array_slice($data, ($page - 1) * LIST_LENGTH, LIST_LENGTH);
+    return (object)compact("startPage" ,"endPage", "next", "prev",  "data", "page");
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
 }
 
 // function dump(){

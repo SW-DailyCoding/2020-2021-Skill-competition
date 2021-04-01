@@ -75,7 +75,11 @@
                                     <li><a href="#" class="t-bold em-11">공연</a>
                                         <ul class="menu3">
                                             <li><a href="/calender?y=2021&m=03">월간 공연 일정</a></li>
+<<<<<<< HEAD
                                             <li><a href="/y_calender?y=2021&m=03">연간 공연 일정</a></li>
+=======
+                                            <li><a href="/y_calender">연간 공연 일정</a></li>
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
                                         </ul>
                                     </li>
                                     <li><a href="#" class="t-bold em-11">전시</a>

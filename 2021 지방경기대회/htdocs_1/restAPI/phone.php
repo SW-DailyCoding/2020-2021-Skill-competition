@@ -1,89 +1,32 @@
-﻿<?php
+<?php
 session_start();
-/*
-comment: 조건에 맞는 JSON 내용 제작 후 반환
-*/
 
-/* 생성될 데이터 갯수(평가시 변경) */
-$telphoneSize = 31;
+header("Content-Type: application/json");
 
-/* 결과 객체 */
-$result = array();
-
-/* 타입*/
-
-
-$typeArr = array("기획운영과", "기획서무", "홍보", "시설", "전승지원과", "전승활성", "이수심사", "조사연구기록과", "조사연구", "기록화사업", "무형유산진흥과", "교육협력", "전시", "공연");
-
-/* 평가시 변경(주최 기관) */
-$hostOrg = "고용노동부|C|각 시도|C|각 시도 교육청";
-
-/* 평가시 변경(주관 기관) */
-$mainOrg = "국제기능올림픽대회 한국기술위원회(한국산업인력공단)|C|각 시도 기능경기위원회(각 시도 한국산업인력공단)|C|마이스터기능경기협회";
-
-
-/* 필수 입력 값 체크
-if(!isset($_REQUEST['pageNo']) || !isset($_REQUEST['numOfRows']) || !isset($_REQUEST['scaleId']))
+/* 세션 존재 비교 */
+$statusCd = "200";
+if(isset($_SESSION['locationCnt']))
 {
-	$result['statusCd'] = "401";
-	$result['statusMsg'] = "입력값이 올바르지 않습니다.";
-	echo json_encode($result);
-	exit;
-}
-*/
-
-/* 데이터 생성 시작 */
-$result['statusCd'] = "200";
-$result['statusMsg'] = "정상";
-
-$result['totalCount'] = $telphoneSize;
-
-
-
-/* 컬렉션 정보 생성 */
-$telphoneList = array();
-
-for($i = 0; $i < $telphoneSize; $i++)
-{
-	$telNo = rand(1000, 9999);
-	$ty = rand(0, count($typeArr) - 1);
-	
-	$telphoneArr = array(
-		"sn" => $i+1,
-		"deptNm" => $typeArr[$ty], 
-		"name" => "홍길동" . ($i+1), 
-		"telNo" => $telNo
-	 );
-	 
-	 $telphoneList[] = $telphoneArr;
-	 
-}
-
-$result['items'] = $telphoneList;
-
-if(isset($_SESSION['phoneReqCnt']))
-{
-	$phoneReqCnt = $_SESSION['phoneReqCnt'];
-	$phoneReqCnt++; 
-	$phoneReqCnt = $_SESSION['phoneReqCnt'] = $phoneReqCnt;
+	/* 세션이 존재할 경우 */
+	$locationCnt = $_SESSION['locationCnt'];
+	$locationCnt++; 
+	$locationCnt = $_SESSION['locationCnt'] = $locationCnt;
 }
 else 
 {
-	$phoneReqCnt = $_SESSION['phoneReqCnt'] = 0;
+	/* 세션이 존재하지 않을 경우*/
+    $locationCnt = $_SESSION['locationCnt'] = 0;
 }
 
-if($phoneReqCnt % 5 == 0)
+/* 카운트 수 비교 */
+if($locationCnt % 5 == 0)
 {
-	$result['statusCd'] = "411";
-	$result['statusMsg'] = "데이터베이스에 연결할 수 없습니다.";	
+	$statusCd = "201";
 }
-else
-{
-	$result['statusCd'] = "200";
-	$result['statusMsg'] = "정상";
-	
-}
-
-
-echo json_encode($result);
 ?>
+{
+	"statusCd" : "<?php echo $statusCd; ?>",
+	"statusMsg" : "알수 없는 오류가 발생했습니다.",
+	"totalCount" : "47",
+	"items" : [{"sn":1,"deptNm":"기획운영과","name":"여*기","telNo":"1001"},{"sn":2,"deptNm":"기획운영과","name":"장*석","telNo":"1002"},{"sn":3,"deptNm":"기획서무","name":"김**","telNo":"1003"},{"sn":4,"deptNm":"기획서무","name":"심**","telNo":"1004"},{"sn":5,"deptNm":"기획서무","name":"황**","telNo":"1005"},{"sn":6,"deptNm":"기획서무","name":"전**","telNo":"1006"},{"sn":7,"deptNm":"기획서무","name":"이**","telNo":"1007"},{"sn":8,"deptNm":"기획서무","name":"김**","telNo":"1008"},{"sn":9,"deptNm":"기획서무","name":"도**","telNo":"1009"},{"sn":10,"deptNm":"홍보","name":"남**","telNo":"1010"},{"sn":11,"deptNm":"홍보","name":"김**","telNo":"1011"},{"sn":12,"deptNm":"홍보","name":"양**","telNo":"1012"},{"sn":13,"deptNm":"홍보","name":"정**","telNo":"1013"},{"sn":14,"deptNm":"홍보","name":"박**","telNo":"1014"},{"sn":15,"deptNm":"시설","name":"황**","telNo":"1015"},{"sn":16,"deptNm":"시설","name":"강**","telNo":"1016"},{"sn":17,"deptNm":"시설","name":"오**","telNo":"1017"},{"sn":18,"deptNm":"전승지원과","name":"김**","telNo":"1018"},{"sn":19,"deptNm":"전승지원과","name":"박**","telNo":"1019"},{"sn":20,"deptNm":"이수심사","name":"신**","telNo":"1020"},{"sn":21,"deptNm":"이수심사","name":"윤**","telNo":"1021"},{"sn":22,"deptNm":"이수심사","name":"김**","telNo":"1022"},{"sn":23,"deptNm":"조사연구기록과","name":"김**","telNo":"1023"},{"sn":24,"deptNm":"조사연구기록과","name":"최**","telNo":"1024"},{"sn":25,"deptNm":"조사연구기록과","name":"오**","telNo":"1025"},{"sn":26,"deptNm":"조사연구기록과","name":"박**","telNo":"1026"},{"sn":27,"deptNm":"조사연구기록과","name":"신*","telNo":"1027"},{"sn":28,"deptNm":"조사연구기록과","name":"차**","telNo":"1028"},{"sn":29,"deptNm":"조사연구","name":"김**","telNo":"1029"},{"sn":30,"deptNm":"조사연구","name":"송**","telNo":"1030"},{"sn":31,"deptNm":"조사연구","name":"이**","telNo":"1031"},{"sn":32,"deptNm":"기록화사업","name":"이**","telNo":"1032"},{"sn":33,"deptNm":"기록화사업","name":"이**","telNo":"1033"},{"sn":34,"deptNm":"기록화사업","name":"윤**","telNo":"1034"},{"sn":35,"deptNm":"기록화사업","name":"양**","telNo":"1035"},{"sn":36,"deptNm":"교육협력","name":"성**","telNo":"1036"},{"sn":37,"deptNm":"교육협력","name":"오**","telNo":"1037"},{"sn":38,"deptNm":"교육협력","name":"이**","telNo":"1038"},{"sn":39,"deptNm":"교육협력","name":"김**","telNo":"1039"},{"sn":40,"deptNm":"전시","name":"송**","telNo":"1040"},{"sn":41,"deptNm":"전시","name":"조**","telNo":"1041"},{"sn":42,"deptNm":"공연","name":"이**","telNo":"1042"},{"sn":43,"deptNm":"공연","name":"최**","telNo":"1043"},{"sn":44,"deptNm":"공연","name":"어**","telNo":"1044"},{"sn":45,"deptNm":"공연","name":"곽**","telNo":"1045"},{"sn":46,"deptNm":"공연","name":"방**","telNo":"1046"},{"sn":47,"deptNm":"공연","name":"박**","telNo":"1047"}]
+}

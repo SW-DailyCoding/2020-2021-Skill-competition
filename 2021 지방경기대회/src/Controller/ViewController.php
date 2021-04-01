@@ -17,6 +17,7 @@ class ViewController {
     }
 
     function y_calender() {
+<<<<<<< HEAD
         // echo ($_GET['y'];);
 
         // var_dump($_GET['m']);
@@ -44,6 +45,12 @@ class ViewController {
     }
 
 
+=======
+        $calenders = DB::fetchAll("SELECT * FROM calenders WHERE showDt >= date(2021-01-01)
+                                                and showDt <= date(2021-12-31)");
+        view("y_calender", compact("calenders"));
+    }
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
     function cultures($id) {
         $culture = DB::find("cultures", $id);
         if(!$culture) back("대상을 찾을 수 없습니다.");
@@ -55,6 +62,7 @@ class ViewController {
     }
 
     function culture() {
+<<<<<<< HEAD
         // var_dump(DB::fetchAll("SELECT * FROM cultures ORDER BY id DESC"));
         $cultures = DB::fetchAll("SELECT * FROM cultures");
         $cultures = pagination($cultures);
@@ -63,6 +71,9 @@ class ViewController {
         $type = isset($_GET['type']) ? $_GET['type'] : "list" ;
         // var_dump($cultures);
         view("culture", compact("cultures", "type"));
+=======
+        view("culture", pagination(DB::fetchAll("SELECT * FROM cultures ORDER BY id DESC")));
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
     }
 
     function openApi() {

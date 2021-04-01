@@ -5,6 +5,7 @@ use App\DB;
 
 class ActionController {
     function getCulture() {
+<<<<<<< HEAD
         DB::query("DELETE FROM cultures");
 
         $xml = simplexml_load_file(SRC . "/nihList.xml");
@@ -15,10 +16,20 @@ class ActionController {
             $item = $xml->item[$i];
             $id = (int)$item->sn;
  
+=======
+        // DB::query("DELETE FROM cultures");
+
+        $xml = simplexml_load_file(SRC . "/nihList.xml");
+
+
+        foreach($xml->item as $item) {
+            $id = (int)$item->sn;
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
             $no = (int)$item->no;
             $name = (string)$item->ccmaName;
             $sno = (int)$item->crltsnoNm;
             $nm = (string)$item->ccbaMnm1;
+<<<<<<< HEAD
             $kdcd = (string)$item->ccbaKdcd;
             $ctcd = (string)$item->ccbaCtcd;
             $asno = (string)$item->ccbaAsno;
@@ -40,6 +51,18 @@ class ActionController {
         }
     }
     
+=======
+            $kdcd = (int)$item->ccbaKdcd;
+            $ctcd = (int)$item->ccbaCtcd;
+            $asno = (int)$item->ccbaAsno;
+
+            DB::query("INSERT INTO cultures(id, no, name, sno, nm, kdcd, ctcd, asno) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)", [
+               $id, $no, $name, $sno, $nm, $kdcd, $ctcd, $asno
+            ]);
+        }
+    }
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
 
     function insertCalender() {
         extract($_POST);
@@ -53,6 +76,7 @@ class ActionController {
         go("/calender?y=2021&m=03", "일정을 추가했습니다.");
     }
 
+<<<<<<< HEAD
 
     function updateCultures() {
 
@@ -67,6 +91,12 @@ class ActionController {
         extract($_POST);
         $id = $_GET['id'];
         var_dump($id);
+=======
+    function updateCalender() {
+        extract($_POST);
+        $id = $_GET['id'];
+        // var_dump($id);
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
         $calender = DB::find("calenders", $id);
         if(!$calender) back("대상을 찾을 수 없습니다.");
 
@@ -89,6 +119,7 @@ class ActionController {
         go("/calender?y=2021&m=03", "일정을 삭제했습니다.");
     }
 
+<<<<<<< HEAD
     // function getDetail() {
 
 
@@ -108,6 +139,8 @@ class ActionController {
     //         ]);
     //     }
     // }
+=======
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
     // function getCalender() {
     //     $xml = 
     // }
@@ -136,9 +169,17 @@ class ActionController {
     //     }
 
 
+<<<<<<< HEAD
     // }
 
 // }
 
 // }
     }
+=======
+    }
+
+// }
+
+// }
+>>>>>>> 49e8f1dc83a928681dabe73b746a73a6c2608170
