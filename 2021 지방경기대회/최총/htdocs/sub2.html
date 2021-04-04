@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap-4.5.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./font-awesome/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>무형문화재관리원</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <input type="checkbox" id="open-aside" hidden>
+        <!-- 헤더 영역-->
+        <header>
+            <div class="header_top">
+                <span class="d-center em-08"><span class="t-bold t-sub">소통</span>으로 나누는 <span
+                        class="t-red t-bold">&nbsp;문화재</span></span>
+            </div>
+            <div class="header_body py-1">
+                <div class="container">
+                    <div class="d-between">
+                        <div class="logo w-200"><img src="./images/logo.png" alt="logo" title="logo" class="fit-cover">
+                        </div>
+                        <div class="search"><label class="em-085 pl-3 py-2">통합검색</label><input type="search"><i
+                                class="pr-4 fa fa-search"></i></div>
+                        <div class="etc d-center">
+                            <a href="#" class="mr-3 em-09 t-gray">로그인</a>
+                            <a href="#" class="mr-3 em-09 t-gray">회원가입</a>
+                            <a href="#" class="mr-5 em-09 t-gray">문의하기</a>
+                            <select name="" id="" class="t-gray em-09">
+                                <option value="한국어">한국어</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom py-3">
+                <div class="container">
+                    <div class="d-center">
+                        <label for="open-aside" class="more-btn d-center">
+                            <i class="fa fa-bars pointer d-center"></i>
+                        </label>
+                        <div class="menu d-around">
+                            <div><a href="#">HOME</a></div>
+                            <div><a href="#">무형문화재관리원</a>
+                                <div class="menu2">
+                                    <div class="row">
+                                        <div class="col-sm-5 col-5">
+                                            <img src="./images/nav1.png" class="fit-cover" title="image" alt="image">
+                                        </div>
+                                        <div class="col-sm-7 col-7">
+                                            <div class="row">
+                                                <div class="nav_item t-bold"><a href="#" class="t-bold t-sub">소개</a>
+                                                </div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-bold t-sub">일반현황</a>
+                                                    <div class="menu3">
+                                                        <div><a href="#" class="mb-3">- 설립목적</a></div>
+                                                        <div><a href="#" class="mb-3">- 연혁</a></div>
+                                                        <div><a href="#" class="mb-3">- 역할</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nav_item"><a href="#" class="t-bold t-sub">주요업무계획</a></div>
+                                                <div class="nav_item"><a href="#" class="t-bold t-sub">조직 및 구성</a></div>
+                                                <div class="nav_item"><a href="#" class="t-bold t-sub">전화번호</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div><a href="#">무형문화재 현황</a>
+                                <div class="menu2">
+                                    <div class="row">
+                                        <div class="col-sm-5 col-5">
+                                            <img src="./images/nav2.png" class="fit-cover" title="image" alt="image">
+                                        </div>
+                                        <div class="col-sm-7 col-7">
+                                            <div class="row my-5">
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">전통 공연·예술</a>
+                                                </div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">전통 기술</a></div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">전통 지식</a></div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">구전 전통 및 표현</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">전통 생활관습</a></div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">의례·의식</a></div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">전통 놀이·무예</a>
+                                                </div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">전체 현황</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div><a href="#">행사 안내</a>
+                                <div class="menu2">
+                                    <div class="row">
+                                        <div class="col-sm-5 col-5">
+                                            <img src="./images/nav3.png" class="fit-cover" title="image" alt="image">
+                                        </div>
+                                        <div class="col-sm-7 col-7">
+                                            <div class="row">
+                                                <div class="nav_item"><a href="#" class="t-bold t-sub">공연</a>
+                                                    <div class="menu3">
+                                                        <div><a href="#" class="mb-4">- 월간 공연 일정</a></div>
+                                                        <div><a href="#" class="mb-4">- 연간 공연 일정</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nav_item"><a href="#" class="t-bold t-sub">전시</a>
+                                                    <div class="menu3">
+                                                        <div><a href="#" class="mb-4">- 관람 안내</a></div>
+                                                        <div><a href="#" class="mb-4">- 전시실</a></div>
+                                                        <div><a href="#" class="mb-4">- 디지털 체험관</a></div>
+                                                        <div><a href="#" class="mb-4">- 기획 전시실</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nav_item"><a href="#" class="t-bold t-sub">교육</a>
+                                                    <div class="menu3">
+                                                        <div><a href="#" class="mb-4">- 전문 교육</a></div>
+                                                        <div><a href="#" class="mb-4">- 사회 교육</a></div>
+                                                        <div><a href="#" class="mb-4">- 연간 교육 일정</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div><a href="#">전승지원</a>
+                                <div class="menu2">
+                                    <div class="row">
+                                        <div class="col-sm-5 col-5">
+                                            <img src="./images/nav4.png" class="fit-cover" title="image" alt="image">
+                                        </div>
+                                        <div class="col-sm-7 col-7">
+                                            <div class="row py-5">
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">공방</a></div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">공예품 갤러리</a></div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">전수교육관 현황</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div><a href="#">공개 데이터</a>
+                                <div class="menu2">
+                                    <div class="row">
+                                        <div class="col-sm-5 col-5">
+                                            <img src="./images/nav5.png" class="fit-cover" title="image" alt="image">
+                                        </div>
+                                        <div class="col-sm-7 col-7">
+                                            <div class="row py-5">
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">무형문화재 현황 조회</a>
+                                                </div>
+                                                <div class="nav_item t-bold"><a href="#" class="t-sub">공연 일정 조회</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /헤더 영역-->
+
+        <!-- 사이드 바-->
+        <aside class="d-lg-none">
+            <label for="open-aside" class="aside_background"></label>
+            <div class="aside_menu">
+                <div><a href="#">HOME</a></div>
+                <div><a href="#">무형문화재관리원</a>
+                    <div class="aside-menu2">
+                        <div class="nav_item t-bold"><a href="#" class="t-bold t-sub">소개</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-bold t-sub">일반현황</a>
+                            <div class="aside-menu3">
+                                <div><a href="#" class="mb-3">- 설립목적</a></div>
+                                <div><a href="#" class="mb-3">- 연혁</a></div>
+                                <div><a href="#" class="mb-3">- 역할</a></div>
+                            </div>
+                        </div>
+                        <div class="nav_item"><a href="#" class="t-bold t-sub">주요업무계획</a></div>
+                        <div class="nav_item"><a href="#" class="t-bold t-sub">조직 및 구성</a></div>
+                        <div class="nav_item"><a href="#" class="t-bold t-sub">전화번호</a></div>
+                    </div>
+                </div>
+                <div><a href="#">무형문화재 현황</a>
+                    <div class="aside-menu2">
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">전통 공연·예술</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">전통 기술</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">전통 지식</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">구전 전통 및 표현</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">전통 생활관습</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">의례·의식</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">전통 놀이·무예</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">전체 현황</a></div>
+                    </div>
+                </div>
+                <div><a href="#">행사 안내</a>
+                    <div class="aside-menu2">
+                        <div class="nav_item"><a href="#" class="t-bold t-sub">공연</a>
+                            <div class="aside-menu3">
+                                <div><a href="#" class="mb-4">- 월간 공연 일정</a></div>
+                                <div><a href="#" class="mb-4">- 연간 공연 일정</a></div>
+                            </div>
+                        </div>
+                        <div class="nav_item"><a href="#" class="t-bold t-sub">전시</a>
+                            <div class="aside-menu3">
+                                <div><a href="#" class="mb-4">- 관람 안내</a></div>
+                                <div><a href="#" class="mb-4">- 전시실</a></div>
+                                <div><a href="#" class="mb-4">- 디지털 체험관</a></div>
+                                <div><a href="#" class="mb-4">- 기획 전시실</a></div>
+                            </div>
+                        </div>
+                        <div class="nav_item"><a href="#" class="t-bold t-sub">교육</a>
+                            <div class="aside-menu3">
+                                <div><a href="#" class="mb-4">- 전문 교육</a></div>
+                                <div><a href="#" class="mb-4">- 사회 교육</a></div>
+                                <div><a href="#" class="mb-4">- 연간 교육 일정</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div><a href="#">전승지원</a>
+                    <div class="aside-menu2">
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">공방</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">공예품 갤러리</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">전수교육관 현황</a></div>
+                    </div>
+                </div>
+                <div><a href="#">공개 데이터</a>
+                    <div class="aside-menu2">
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">무형문화재 현황 조회</a></div>
+                        <div class="nav_item t-bold"><a href="#" class="t-sub">공연 일정 조회</a></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- 비주얼 영역 -->
+        <div class="visual2">
+            <img src="./images/visual/visual1.png" alt="" class="fit-cover">
+            <div>
+                <div class="em-24 t-white d-center  p-center mt-5 pt-5">행사 안내</div>
+            </div>
+        </div>
+        <!-- /비주얼 영역 -->
+        <div class="sub">
+            <div class="title d-column my-5">
+                <div class="img w-5 ">
+                    <img src="./images/13.png" alt="" title="" class="fit-cover">
+                </div>
+                <div class="t-bold em-22 mt-3">월간 캘린더</div>
+                <div class="d-center my-2">
+                    <i class="fa fa-home mr-3"></i>
+                    <i class="fa fa-angle-right mr-3"></i>
+                    <div class="em-09 mr-3">안녕</div>
+                    <i class="fa fa-angle-right mr-3"></i>
+                    <div class="em-09">안녕</div>
+                </div>
+            </div>
+            <div class="content layout">
+                <!-- 앨범 -->
+                <div class="chung">
+                    <div class="d-between">
+                        <div>
+                        </div>
+                        <div>
+                            <a href="#" class="btn-fill">등록</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="calender my-5">
+                    <div class="calender_header">
+                        <div class="text-center">
+                            <span class="em-14 t-bold mr-3 text-center">2020년</span>
+                            <span class="em-14 t-bold mr-5 text-center">7월</span>
+                            <div class="d-around">
+                                <a href="#" class="em-085 calneder_btn btn-border"><i class="fa fa-angle-left"></i></a>
+                                <a href="#" class="em-085 calneder_btn btn-border"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calender_body my-5">
+                        <div class="ju row mb-3">
+                            <div class="em-12 t-bold">월</div>
+                            <div class="em-12 t-bold">화</div>
+                            <div class="em-12 t-bold">수</div>
+                            <div class="em-12 t-bold">목</div>
+                            <div class="em-12 t-bold">금</div>
+                            <div class="em-12 t-bold">토</div>
+                            <div class="em-12 t-bold">일</div>
+                        </div>
+                        <div class="day row">
+                            <div class="item em-09 t-bold p-2"></div>
+                            <div class="item em-09 t-bold p-2"></div>
+                            <div class="item em-09 t-bold p-2"></div>
+                            <div class="item em-09 t-bold p-2"><div class="today">1</div>
+                                <div class="day_item d-between">
+                                    안녕</div>
+                                <div class="day_item d-between">
+                                    안녕</div>
+                                <div class="day_item d-between">
+                                    안녕</div>
+                                <div class="day_item d-between">
+                                    안녕</div>
+                                <div class="day_item d-between">
+                                    안녕</div>
+                                <div class="day_item d-between">
+                                    안녕</div>
+                                <div class="day_item d-between">
+                                    안녕</div>
+                                <div class="day_item d-between">
+                                    안녕</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">2</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">3</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">4</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">5</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">6</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">7</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">8</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">9</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">10</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">11</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">12</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">13</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">14</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">15</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">16</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">17</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">18</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">19</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">20</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">21</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">22</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">23</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">24</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">25</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">26</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">27</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">28</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">29</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2">
+                                <div class="date">30</div>
+                            </div>
+                            <div class="item em-09 t-bold p-2"
+                            ><div class="date"></div></div>
+                            <div class="item em-09 t-bold p-2"
+                            ><div class="date"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eng_title">
+                <span class="t-bold">CULTURES</span>
+            </div>
+        </div>
+    </div>
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="container py-4">
+            <div class="row py-4">
+                <div class="col-lg-7 col-7">
+                    <ul class="d-around row">
+                        <li><a href="#" class="t-white ml-3">이용안내</a></li>
+                        <li><a href="#" class="t-white ml-3">개인정보 처리방침 </a></li>
+                        <li><a href="#" class="t-white ml-3">저작권 보호정책</a></li>
+                        <li><a href="#" class="t-white ml-3">도로명 주소안내</a></li>
+                        <li><a href="#" class="t-white ml-3">사이트오류 신고</a></li>
+                    </ul>
+                    <div class="pl-3 ml-2 mt-4 t-white em-09">
+                        인천시 부평구 무네미로 448번길 77 한국산업인력공단 글로벌숙련기술진흥원
+                        <br />COPYRIGHTⓒ 2016 HRDKOREA
+                    </div>
+                </div>
+                <div class="col-sm-5 col-5 d-column">
+                    <div class="logo w-200">
+                        <img src="./images/logo2.png" alt="" title="" class="fit-cover">
+                    </div>
+                    <div class="sns d-center">
+                        <i class="ml-4 fa fa-twitter t-white"></i>
+                        <i class="ml-4 fa fa-facebook t-white"></i>
+                        <i class="ml-4 fa fa-instagram t-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /푸터 영역 -->
+</body>
+</html>
